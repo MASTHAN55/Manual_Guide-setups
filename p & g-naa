@@ -1,8 +1,8 @@
 git-hub: https://github.com/masthan55/all-setup.git
 
 1. Create 3-servers. 1-main-server, 2-worker-node servers.                                                      [Node-exporter ---> prometheus ---> graphana dash-bord].
- * main server (all-script)                                // install "pegion.sh" script.
- * worker-1 (install node-exporter)  from git ()           // if you dont install node-exporter will not work
+ * main server (all-script)                                   // install "pegion.sh" script.
+ * worker-1 (install node-exporter)  from git(pegion.sh)      // if you dont install node-exporter will not work
  * worker-2 (install node-exporter)
 
 2. connect to prometheus main-server.
