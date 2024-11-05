@@ -1,12 +1,12 @@
 git-hub: https://github.com/masthan55/all-setup.git
 
 1. Create 3-servers. 1-main-server, 2-worker-node servers.                                                      [Node-exporter ---> prometheus ---> graphana dash-bord].
- * main server (all-script)
+ * main server (all-script)                                // install pegion.sh script.
  * worker-1 (install node-exporter)  from git ()           // if you dont install node-exporter 
  * worker-2 (install node-exporter)
 
 2. connect to prometheus main-server.
- * vim /etc/prometheus/prometheus.yml
+ * vim /etc/prometheus/prometheus.yml  
  * vim /etc/hosts
    5.25.658.657 worker-1          (copy public-ip of worker-1)
    3.54.548.552 worker-2          (copy public-ip of worker-2)   
