@@ -1,10 +1,12 @@
+create three servers.                                                                                                               [ Node-exporter ---> prometheus ---> graphana].
+1. 
 PROMETHERUS: 9090
 NODE EXPORTER: 9100
 GRAFANA: 3000
 
 CONNECTION:
 SETUP BOTH PROMETHEUS & GRAFAN FROM BELOW LINK
-https://github.com/RAHAMSHAIK007/all-setups.git
+https://github.com/masthan55/all-setup.git                   // pegion.sh
 
 CONNECTING PROMETHEUS TO GARAFANA:
 connect to grafana dashboard -- > Data source -- > add -- > promethus -- > url of prometheus -- > save & test -- >
