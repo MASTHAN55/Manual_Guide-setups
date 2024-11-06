@@ -52,7 +52,7 @@ vim deploy.yml
 * copy public-ip, paste on broswer.
 
 ===================================================================== [BACKEND-CODE DEPLOYMENT] =====================================================================
-1. Setup tomcat [Do slave server]. 
+1. Setup tomcat [Do ansible server]. 
   * vim tomcat.yml         [create]
   * vim tomcat-users.xml   [create] 
   * vim context.xml        [create]
