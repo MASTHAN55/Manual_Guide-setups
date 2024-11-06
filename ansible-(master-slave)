@@ -62,7 +62,44 @@ vim deploy.yml
   * install "ansible and stage view" pluggens.
       ---> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
 
-3. create pipeline.
+3. create pipeline
+
+  pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/MASTHAN55/jenkins-java-project-1.git'
+              
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('artifact') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+    }
+}
+vim deploy.yml
+- hosts: all
+  tasks:
+    - name: deplpy
+      copy:
+        src: /var/lib/jenkins/workspace/pipeline/target/netflix-1.2.0.war
+        dest: /root/tomcat/webapps
+
+
 
 
    
