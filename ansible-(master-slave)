@@ -9,17 +9,17 @@
   * hostname -i                                                         // showing private_id.
 
 3. Do ansible server only.
-  * amazon-linux-extras install ansible2 -y                             // install ansible.
-  * yum install python3 python-pip python-dlevel -y                     
+   amazon-linux-extras install ansible2 -y                             // install ansible.
+   yum install python3 python-pip python-dlevel -y                     
 
 4. Do ansible sever only.
   * vim /etc/ansible/hosts                                  // go to ansible inventory file (or) path.
    [dev]  (Do-12-line)                                      // adding ip_adderses inventory file (or) path.
-    paste ip-adderss of "dev_server-1"
-    paste ip-adderss of "dev_server-2"
+    public ip-adderss of "dev_server-1"
+    public ip-adderss of "dev_server-2"
    [test]      "
-    paste ip_adderss of "test_server-1"
-    paste ip-adderss of "test_server-2"
+    public ip_adderss of "test_server-1"
+    public ip-adderss of "test_server-2"
 
 5. Do ansible server only. 
    * ssh-keygen                                        // generating a new key.
