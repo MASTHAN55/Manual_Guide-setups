@@ -15,11 +15,11 @@
 4. Do ansible sever only.
   * vim /etc/ansible/hosts                                  // go to ansible inventory file (or) path.
    [dev]  (Do-12-line)                                      // adding ip_adderses inventory file (or) path.
-    public ip-adderss of "dev_server-1"
-    public ip-adderss of "dev_server-2"
+    private ip-adderss of "dev_server-1"
+    private ip-adderss of "dev_server-2"
    [test]      "
-    public ip_adderss of "test_server-1"
-    public ip-adderss of "test_server-2"
+    private ip_adderss of "test_server-1"
+    private ip-adderss of "test_server-2"
 
 5. Do ansible server only. 
    * ssh-keygen ---> Do-Enter "4-times".               // generating a new key.
