@@ -1,6 +1,6 @@
 git-hub: https://github.com/masthan55/all-setup.git
 
-1. Creating servers.
+1. Create servers.
   * Create 3-servers. 1-main-server, 2-worker-node servers.                                               [Node-exporter ---> prometheus ---> graphana dash-bord].
   * main server (Execute all-script)                                   // install "pegion.sh" script.
   * worker-1 (install node-exporter)  from git(pegion.sh)              // if you don't install node-exporter in worker nodes it will not work.
