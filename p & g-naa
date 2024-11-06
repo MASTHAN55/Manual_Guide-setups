@@ -1,23 +1,26 @@
 git-hub: https://github.com/masthan55/all-setup.git
 
-1. Create 3-servers. 1-main-server, 2-worker-node servers.                                               [Node-exporter ---> prometheus ---> graphana dash-bord].
- * main server (all-script)                                   // install "pegion.sh" script.
- * worker-1 (install node-exporter)  from git(pegion.sh)      // if you dont install node-exporter will not work
- * worker-2 (install node-exporter)
+1. Creating servers.
+  * Create 3-servers. 1-main-server, 2-worker-node servers.                                               [Node-exporter ---> prometheus ---> graphana dash-bord].
+  * main server (Execute all-script)                                   // install "pegion.sh" script.
+  * worker-1 (install node-exporter)  from git(pegion.sh)              // if you don't install node-exporter in worker nodes it will not work.
+  * worker-2 (install node-exporter)         "
 
-2. connect to prometheus main-server.
- * vim /etc/prometheus/prometheus.yml  
- * vim /etc/hosts
-   5.25.658.657 worker-1          (copy public-ip of worker-1)
-   3.54.548.552 worker-2          (copy public-ip of worker-2)   
+2. Do main-server.
+  * vim /etc/prometheus/prometheus.yml                 // if we can add another worker-node 
+  * vim /etc/hosts
+    5.25.658.657 worker-1          (copy public-ip of worker-1)
+    3.54.548.552 worker-2          (copy public-ip of worker-2)   
 
-3. go to prometheus refreash and check host(option).
-  * if you can see worker-1 and worker-2 it's completed.
- 
-4. PROMETHERUS: 9090            // All port nbrs.
+3. Connection ports.
+   PROMETHERUS: 9090            
    NODE EXPORTER: 9100
    GRAFANA: 3000
 
-5. CONNECTING PROMETHEUS TO GARAFANA:
+4. CONNECTING PROMETHEUS TO GARAFANA:
    connect to grafana dashboard -- > Add your first "Data source" -- > add -- > promethus -- > url of prometheus -- > save & test -- >
    top of page -- > explore data -- > if you want run some queries -- > top -- > import dashboard -- > 1860 -- > laod --- > prometheus -- > import 
+
+5. Go grafana dashbord refreash and check host(option).
+   * if you can see worker-1 and worker-2 it's completed.
+ 
