@@ -17,7 +17,7 @@
    [dev]  (Do-12-line)                                      // adding ip_adderses inventory file (or) path.
     paste ip-adderss of "dev_server-1"
     paste ip-adderss of "dev_server-2"
-   [test]
+   [test]      "
     paste ip_adderss of "test_server-1"
     paste ip-adderss of "test_server-2"
 
