@@ -3,7 +3,6 @@
    * passwd root                                                         // set password for root user.
  
 2. Do all servers.
-  * Security shell 
   * vim /etc/ssh/sshd_config  (38,61)-uncommit                          // giving root_user login permmisions.
   * systemctl restart sshd                                              // restart sshd (mandatory).        
   * systemctl status sshd
@@ -16,13 +15,13 @@
 4. Do ansible sever only.
   * vim /etc/ansible/hosts                                  // go to ansible inventory file (or) path.
    [dev]  (Do-12-line)                                      // adding ip_adderses inventory file (or) path.
-    paste ip-adderss of dev_server-1
-    paste ip-adderss of dev_server-2
+    paste ip-adderss of "dev_server-1"
+    paste ip-adderss of "dev_server-2"
    [test]
-    paste ip_adderss of test_server-1
-    paste ip-adderss of test_server-2
+    paste ip_adderss of "test_server-1"
+    paste ip-adderss of "test_server-2"
 
-5. Do ansible server. 
+5. Do ansible server only. 
    * ssh-keygen                                        // generating a new key.
    * ll .ssh/                                          // showing keys (id_rsa, id_rsa.pub).
    * ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server (mandatory).
