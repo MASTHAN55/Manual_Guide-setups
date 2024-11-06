@@ -57,6 +57,7 @@ vim deploy.yml
   * vim tomcat-users.xml   [create] 
   * vim context.xml        [create]
   * ansible-playbook tomcat.yml 
+  
 2. jenkins inastallation. [Do ansible-server]
   * install jenkins [jenkins.sh]
   * install "ansible and stage view" pluggens.
