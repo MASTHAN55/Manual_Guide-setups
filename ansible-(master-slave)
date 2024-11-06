@@ -22,8 +22,8 @@
     public ip-adderss of "test_server-2"
 
 5. Do ansible server only. 
-   * ssh-keygen                                        // generating a new key.
+   * ssh-keygen ---> Do-Enter "4-times".               // generating a new key.
    * ll .ssh/                                          // showing keys (id_rsa, id_rsa.pub).
    * ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server (mandatory).
      ["Do all ip's same for connection"]
-   * ssh "paste ip_adderss of dev-server"              // connection complete ansible to dev.
+   * ssh "paste ip-adderss of "dev-server"            // connection complete ansible to dev.
