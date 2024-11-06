@@ -27,3 +27,60 @@
    * ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server (mandatory).     
    * ssh "paste ip-adderss of "dev-server"             // connection complete ansible to dev.
      ["Do all ip's same for connection"].
+
+=============================================================== [FRENTEND-CODE DEPLOYMENT] =====================================================================================================
+1. Do ansible server.                                                           
+vim deploy.yml
+- hosts: all
+  tasks:
+    - name: installing httpd
+      yum: name=httpd state=present
+
+    - name: starting httpd
+      service: name=httpd state=started
+
+    - name: installing git
+      yum: name=git state=present
+
+    - name: checkout
+      git:
+        repo: https://github.com/MASTHAN55/netflix-clone.git
+        dest: /var/www/html
+
+* ansible-playbook deploy.yml
+* if we can see netflix files it's done.
+* copy public-ip, paste on broswer.
+
+===================================================================== [BACKEND-CODE DEPLOYMENT] =====================================================================
+1. Setup tomcat [Do slave server]. 
+  * vim tomcat.yml         [create]
+  * vim tomcat-users.xml   [create] 
+  * vim context.xml        [create]
+  * ansible-playbook tomcat.yml 
+2. jenkins inastallation. [Do ansible-server]
+  * install jenkins [jenkins.sh]
+  * install "ansible and stage view" pluggens.
+      ---> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
+
+3. create pipeline.
+
+
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
