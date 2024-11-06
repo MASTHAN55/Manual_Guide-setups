@@ -1,12 +1,12 @@
 1. Servers creation. 
    * cerate "5-servers" (1-ansible, 2-dev_servers, 2-test_server).
-   * passwd root                                                         // set password for root user.
+   * passwd root                                                        // set password for root user.
  
 2. Do all servers.
-  * vim /etc/ssh/sshd_config  (38,61)-uncommit                          // giving root_user login permmisions.
-  * systemctl restart sshd                                              // restart sshd (mandatory).        
+  * vim /etc/ssh/sshd_config  (38,61)-uncommit                         // giving root_user login permmisions.
+  * systemctl restart sshd                                             // restart sshd (mandatory).        
   * systemctl status sshd
-  * hostname -i                                                         // showing private_id.
+  * hostname -i                                                        // showing private_id.
 
 3. Do ansible server only.
    amazon-linux-extras install ansible2 -y                             // install ansible.
