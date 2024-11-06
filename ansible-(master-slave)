@@ -24,6 +24,6 @@
 5. Do ansible server only. 
    * ssh-keygen ---> Do-Enter "4-times".               // generating a new key.
    * ll .ssh/                                          // showing keys (id_rsa, id_rsa.pub).
-   * ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server (mandatory).
-     ["Do all ip's same for connection"]
+   * ssh-copy-id root@ip_address of dev-server         // copying keys from ansible-server to dev-server (mandatory).     
    * ssh "paste ip-adderss of "dev-server"            // connection complete ansible to dev.
+     ["Do all ip's same for connection"].
