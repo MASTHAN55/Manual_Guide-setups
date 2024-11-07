@@ -65,33 +65,32 @@ vim deploy.yml
 
 3. create pipeline
 
-  pipeline {
-    agent any
-
+      pipeline {
+    agent any 
     stages {
-        stage('checkout') {
+        stage ('checkout'){
             steps {
-                git 'https://github.com/MASTHAN55/jenkins-java-project-1.git'
-              
+                git 'https://github.com/MDinesh28/jenkins-java-project.git'
             }
         }
-        stage('build') {
+        stage ('build') {
             steps {
                 sh 'mvn compile'
             }
         }
-        stage('test') {
+        stage ('test') {
             steps {
                 sh 'mvn test'
             }
         }
-        stage('artifact') {
+        stage ('artifact') {
             steps {
                 sh 'mvn package'
             }
         }
     }
 }
+    
 vim deploy.yml
 - hosts: all
   tasks:
