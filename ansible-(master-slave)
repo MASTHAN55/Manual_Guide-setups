@@ -60,7 +60,7 @@ vim deploy.yml
   
 2. jenkins inastallation. [Do ansible-server]
   * install jenkins [jenkins.sh]
-2.1.[Do-configuration]
+2.1.[Do-configuration...]
   * install "ansible and stage view" pluggens.
       ---> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
 
