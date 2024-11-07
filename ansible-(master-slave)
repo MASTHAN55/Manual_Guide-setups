@@ -95,14 +95,52 @@ vim deploy.yml
 vim deploy.yml
 - hosts: all
   tasks:
-    - name: deplpy
+    - name: deploy
       copy:
         src: /var/lib/jenkins/workspace/pipeline/target/netflix-1.2.0.war
         dest: /root/tomcat/webapps
 
 ==================================================================== [FULLY-AUTOMATED] =============================================================================
+mv deploy.yml /etc/ansible/deploy.yml         
+
+---> go tools ---> 
+
+---> configuration ---> pypeline syntax ---> sample step(ansible) ---> ansible tool(ansible) ---> playbook file path in workspace(/etc/ansible/deploy.yml)
+inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credentials ---> username with passwd ---> username(root) ---> password(masthan123)
+host subset($server) ---> this project is parameterised(name=server, choice=dev,test) ---> disable the host ssh key check(click) ---> Generate pypeline script.
 
 
+
+              pipeline {
+    agent any 
+    stages {
+        stage ('checkout'){
+            steps {
+                git 'https://github.com/MDinesh28/jenkins-java-project.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+        stage ('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage ('artifact') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage ('deploy') {
+            steps {
+                ansiblePlaybook credentialsId: '25a780b7-e70a-443c-a8c2-9ea95756b002', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', limit: '$server', playbook: '/etc/ansible/deploy.yml', vaultTmpPath: ''
+            }
+        }
+    }
+}
 
    
     
