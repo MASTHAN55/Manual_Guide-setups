@@ -108,12 +108,11 @@ inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credent
 host subset($server) ---> disable the host ssh key check(click) ---> Generate pypeline script.
 
 [HOSTS]
----> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> disable the host ssh key check(click) 
----> Generate pypeline script.
+---> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> save.
 
 [BRANCHES]
----> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project RUL) ---> branch($branch) ---> copy-link and paste on git
----> general ---> this project is parameterised(name=branch,choices=master,main,relese).
+---> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project RUL) ---> branch($branch) ---> copy-link and paste on git.
+---> general ---> this project is parameterised(name=branch,choices=master,main,relese) ---> save.
 
     pipeline {
     agent any 
