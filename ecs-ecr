@@ -1,0 +1,2 @@
+
+create one server(t2.medium) ---> attach IAM role ---> create ecr(name=movies, enable scan on push) ---> create ecs(name=flipcart) ---> execuite commands from ecr(view push commands).
