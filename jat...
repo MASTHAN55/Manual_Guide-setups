@@ -103,15 +103,19 @@ vim deploy.yml
 ==================================================================== [FULLY-AUTOMATED] =============================================================================
 mv deploy.yml /etc/ansible/deploy.yml         
 
----> go tools ---> 
-
 ---> configuration ---> pypeline syntax ---> sample step(ansible) ---> ansible tool(ansible) ---> playbook file path in workspace(/etc/ansible/deploy.yml)
-inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credentials ---> username with passwd ---> username(root) ---> password(masthan123)
-host subset($server) ---> this project is parameterised(name=server, choice=dev,test) ---> disable the host ssh key check(click) ---> Generate pypeline script.
+inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credentials ---> username with passwd(user name=root, password=masthan123)
+host subset($server) ---> disable the host ssh key check(click) ---> Generate pypeline script.
 
+[HOSTS]
+---> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> disable the host ssh key check(click) 
+---> Generate pypeline script.
 
+[BRANCHES]
+---> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project RUL) ---> branch($branch) ---> copy-link and paste on git
+---> general ---> this project is parameterised(name=branch,choices=master,main,relese).
 
-              pipeline {
+    pipeline {
     agent any 
     stages {
         stage ('checkout'){
