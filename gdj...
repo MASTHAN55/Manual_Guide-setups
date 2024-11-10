@@ -4,10 +4,11 @@
 2. Do all servers.
    * install docker.
      yum install docker -y
-   * docker init [connect all servers with token].
+   * docker swarm init [connect all servers with token
+     docker node ls             // show all actively connections.
 
 3. give permissions [Do master server].
-   chmod 777 /var/run/docker.sock           // giving permissions for docker.sock 
+   chmod 777 /var/run/docker.sock           //giving permissions for docker.sock 
    systemctl daemon-reload
    systemctl restart docker.service
 
@@ -25,17 +26,18 @@
         }
         stage('build') {
             steps {
-                sh 'docker build -t $image .'
+                sh 'docker build -t $image .'             ---> this project is parameterised ---> choice parameter(name=image, choice=movies:v1, train:v1).
             }
         }
         stage('tag') {
             steps {
-                sh 'docker tag $image $repo'
+                sh 'docker tag $image $repo'             ---> this project is parameterised ---> choice parameter(name=repo, choice=masthan733/moviesrepo, 
+                                                               masthan733/trainrepo, masthan733/dthrepo).
             }
         }
         stage('push') {
             steps {
-                sh 'docker login -u masthan733 -p $password'
+                sh 'docker login -u masthan733 -p $password'    ---> manage jenkins ---> system ---> Global properties ---> Environment variables(name=password, value=masthan641@vali) 
                 sh 'docker push $repo'
             }
         }
@@ -47,7 +49,7 @@
     }
 }
 
-docker stack ls
+docker  stack ls
 docker stack rm paytm
 
 
