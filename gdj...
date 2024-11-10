@@ -51,6 +51,7 @@
 
 docker  stack ls
 docker stack rm paytm
+docker service ls
 
 
 
