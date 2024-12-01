@@ -1,1 +1,7 @@
+* CRON JOB:
+  ---> configur ---> Build Triggers ---> Build periodically (45 07 01 12 0) ---> save & exit.
 
+* POLL SCM:
+  ---> configur ---> Build Triggers ---> Poll SCM (45 07 01 12 0) ---> save & exit.
+* WEB-HOOK:
+  
