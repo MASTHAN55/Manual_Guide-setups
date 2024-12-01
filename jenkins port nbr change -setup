@@ -1,1 +1,6 @@
+vim /usr/lib/systemd/system/jenkins.service
+line-72:8080=8000 ---> Environment="JENKINS_PORT=8000"
+systemctl daemon-reload
+systemctl restart jenkins.service
 
+when we change configuration of any service we need to restart.
