@@ -10,7 +10,7 @@
 
 3. Do ansible server only.
    amazon-linux-extras install ansible2 -y                             // install ansible.
-   yum install python3 python-pip python-dlevel -y                     
+   yum install python3 python-pip python-dlevel -y                     // install python 
 
 4. Do ansible sever only.
   * vim /etc/ansible/hosts                                  // go to ansible inventory file (or) path.
@@ -45,7 +45,7 @@ vim deploy.yml
     - name: checkout
       git:
         repo: https://github.com/MASTHAN55/netflix-clone.git
-        dest: /var/www/html
+        dest: /var/www/html              // default html path
 
 * ansible-playbook deploy.yml
 * if we can see netflix files it's done.
@@ -100,10 +100,10 @@ vim deploy.yml
         src: /var/lib/jenkins/workspace/pipeline/target/netflix-1.2.0.war
         dest: /root/tomcat/webapps
 
-==================================================================== [FULLY-AUTOMATED] =============================================================================
+==================================================================== [FULLY-AUTOMATED PIPELINE] =============================================================================
 mv deploy.yml /etc/ansible/deploy.yml         
 
----> configuration ---> pypeline syntax ---> sample step(ansible) ---> ansible tool(ansible) ---> playbook file path in workspace(/etc/ansible/deploy.yml)
+---> configuration ---> pipeline syntax ---> sample step(ansible) ---> ansible tool(ansible) ---> playbook file path in workspace(/etc/ansible/deploy.yml)
 inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credentials ---> username with passwd(user name=root, password=masthan123)
 host subset($server) ---> disable the host ssh key check(click) ---> Generate pypeline script.
 
@@ -111,7 +111,7 @@ host subset($server) ---> disable the host ssh key check(click) ---> Generate py
 ---> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> save.
 
 [BRANCHES]
----> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project RUL) ---> branch($branch) ---> copy-link and paste on git.
+---> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project URL) ---> branch($branch) ---> copy-link and paste on git.
 ---> general ---> this project is parameterised(name=branch,choices=master,main,relese) ---> save.
 
     pipeline {
