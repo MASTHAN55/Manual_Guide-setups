@@ -1,0 +1,8 @@
+stop the jenkins "server" and start it
+systenctl restart jenkins
+
+when we stop "server" the "service" will be also stoped
+so we want to restart them
+
+systemctl stop jenkins.service
+systemctl restart jenkins.service
