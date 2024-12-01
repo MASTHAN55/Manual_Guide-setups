@@ -3,5 +3,10 @@
 
 * POLL SCM:
   ---> configur ---> Build Triggers ---> Poll SCM (45 07 01 12 0) ---> save & exit.
+
 * WEB-HOOK:
+  [Do github account] 
+  ---> repo ---> settings ---> webhook ---> payload url(copy jenkins url) ---> http://3.110.54.139:8090/github-webhook/ ---> content type ---> application/json ---> add.
+  [Do jenkins]
+  ---> create ci job ---> build triggers ---> GitHub hook trigger for GITScm polling(click) ---> save & exit.
   
