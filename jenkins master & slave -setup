@@ -16,7 +16,7 @@ Note:
  2. slave setup and build restrict labels will be same for build.
 
 
-* Pipeline code (it will not show this option "restrict where this job run" in pipeline).  
+* Pipeline code: (it will not show this option "restrict where this job run" in pipeline).  
 
  pipeline {
     agent {
