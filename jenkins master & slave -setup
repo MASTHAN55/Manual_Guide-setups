@@ -25,7 +25,7 @@ Note:
     stages {
         stage ('checkout') {
             steps {
-                git 'https://github.com/RAHAMSHAIK007/jenkins-java-project.git'
+                git ''
             }
         }
         stage ('build') {
