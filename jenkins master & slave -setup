@@ -8,9 +8,47 @@
      number of executors: 3 ---> remote root directory: /tmp ---> labels: slave-1 ---> usage: lost-option ---> launch method: last-option ---> host:(private-ip of slave)
      creadentials ---> pemfile of jenkins server ---> save ----> hostkey verification statagy: last option.
 
-* Build Restrict:
+* Build Restrict: (this option only we can see free-style project only, not-pipeline)
   Dashbord ---> job ---> configur ---> restrict where this job run ---> label:slave-1 ---> save.
 
 Note:
  1. labels are very importent for build.
  2. slave setup and build restrict labels will be same for build.
+
+* Pipeline code (it will not show this option "restrict where this job run" in pipeline).  
+
+ pipeline {
+    agent {
+       label 'slave-1'
+    }    
+    stages {
+        stage ('checkout') {
+            steps {
+                git 'https://github.com/RAHAMSHAIK007/jenkins-java-project.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'mvn compile'
+            }
+        } 
+        stage ('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage ('artifact') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage ('deploy') {
+            steps {
+                echo "my code is deploy"
+            }
+        }
+            
+    }
+}
+  
+  
