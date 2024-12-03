@@ -3,7 +3,7 @@
   t2.medium, java-1.8.0, port:8081
 
 * Setup:
-  signin --> username: admin & password:/app/sonatype-work/nexus3/admin.password --> next --> set password --> disable ananamous acces --> save.
+  signin --> username: admin & password:/app/sonatype-work/nexus3/admin.password --> next --> set own-password --> disable ananamous acces --> save.
 
 * Creating repo:
   settings symbol --> repositories --> new --> maven2(hosted) --> name --> save.
