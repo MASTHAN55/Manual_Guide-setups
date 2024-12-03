@@ -1,5 +1,5 @@
 [Nexus-Setup]:
-* Need:
+* Need: (all-importent)
   t2.medium, java-1.8.0, port:8081
 
 * Setup:
@@ -8,3 +8,7 @@
 * Creating repo:
   settings symbol --> repositories --> new --> maven2(hosted) --> name --> save.
 
+* install plugins:
+  manage jenkins --> Plugins --> avilable Plugins --> download plugin(Nexus Artifact uploder).
+
+* 
