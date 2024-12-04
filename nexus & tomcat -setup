@@ -6,7 +6,7 @@
   signin --> username: admin & password:/app/sonatype-work/nexus3/admin.password --> next --> set own-password --> disable ananamous acces --> save.
 
 * Creating repo:
-  settings symbol --> repositories --> new --> maven2(hosted) --> name --> save.
+  settings symbol --> repositories --> new --> maven2(hosted) --> name(masthan) --> save.
 
 * install plugins:
   manage jenkins --> Plugins --> avilable Plugins --> download plugin(Nexus Artifact uploder).
@@ -16,3 +16,41 @@
   --> username(admin) --> password(masthan123) --> Description(nexus) --> add --> 
   Go pom.xml file in git-Hub --> Group id(in raham) --> Version(1.2.2) ---> Repository(masthan) --> Artifacts --> Artifactid (masthan) --> type(war) --> 
   file(target/Netflix-1.2.2 war) --> Generate pipeline script.
+
+pipeline {
+    agent any
+    
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/devopsbyraham/jenkins-java-project.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('artifact') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage('Artifact upload') {
+            steps {
+                nexusArtifactUploader artifacts: [[artifactId: 'NETFLIX', classifier: '', file: 'target/NETFLIX-1.2.2.war', type: '.war']], credentialsId: '968c23dd-b648-4f15-91bf-7d76981a1218', groupId: 'in.RAHAM', nexusUrl: '100.25.197.110:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'netflix', version: '1.2.2'
+            }
+        }
+    }
+}
+
+[Tomcat -Setup]:
+
+
+
+
