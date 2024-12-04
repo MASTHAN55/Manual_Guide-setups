@@ -1,7 +1,8 @@
 * Server Creation:
   1. create 3-servers.
     1-server (install jenkins).
-    2-servers (install java 11 or 17) [amazon-linux-extras install java-openjdk11 -y, yum install git java-1.8.0-openjdk maven -y]    // install both servers.
+    2-servers (install java 11 or 17) [amazon-linux-extras install java-openjdk11 -y, sudo yum install -y java-17-amazon-corretto, 
+    yum install git java-1.8.0-openjdk maven -y]    // install both servers.
        
 * Slave Setup:
   1. manage jenkins ---> nodes ---> new node ---> node name:masthan ---> parmenent agent ---> save.
