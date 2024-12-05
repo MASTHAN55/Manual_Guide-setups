@@ -1,5 +1,6 @@
 [Nexus-Setup]:
 * Need: (all-importent)
+  vim nexus.sh
   t2.medium, java-1.8.0, port:8081
 
 * Setup:
@@ -50,6 +51,9 @@ pipeline {
 }
 
 [Tomcat -Setup]:
+port :8080
+vim tomcat.sh
+
 
 
 
