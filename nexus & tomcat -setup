@@ -50,9 +50,15 @@ pipeline {
     }
 }
 
+URL(copy & paste) --> broswe --> click on netflix.war --> path click --> keep --> download to local.
+
 [Tomcat -Setup]:
-port :8080
-vim tomcat.sh
+ port :8080
+ vim tomcat.sh [better to chose updated version]
+
+ war file to deploy --> chose a file --> select war file in local --> deploy --> click on netflix.
+ 
+
 
 
 
