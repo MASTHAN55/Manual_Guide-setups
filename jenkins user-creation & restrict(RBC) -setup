@@ -2,9 +2,11 @@
   manage jenkins --> users --> create users --> masthan:fresher.
 
 2.Plugin Download:
-  Dashbord --> manage jenkins --> plugins --> available plugins --> Download: role-based authorization statagy.
+  Dashbord --> manage jenkins --> plugins --> available plugins --> Download: Role-based Authorization Strategy.
 
 3.Configur plugin:
   Dashbord --> manage jenkins --> security --> authorization --> role-based statagy --> save.
 
-4.
+4.Manage and assign users:
+  manage roles --> role to add --> fresher 
+  assign roles --> add user --> masthan:fresher --> save.
