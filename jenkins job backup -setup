@@ -2,4 +2,4 @@
    manage jenkins --> plugins --> ThinBackup & Periodic Backup(install pluggin).
    manage jenkins --> Periodic Backup Manager -->  Click here to configure it --> Temporary Directory: /tmp --> Backup schedule(cron)[00 12 ***] 
    --> Maximum backups in location --> Store no older than(days) [7] --> File Management Strategy --> FullBackup --> Includes list(pipeline-1) 
-   --> Storage Strategy(TarGzStorage) --> Backup Location --> Backup directory path(/tmp) --> Enable this location [tick --> save].
+   --> Storage Strategy(TarGzStorage) --> Backup Location --> Backup directory path(/tmp) --> Enable this location [tick] --> save.
