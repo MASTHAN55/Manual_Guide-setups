@@ -1,0 +1,40 @@
+## vim main.tf                // different workspaces with different environment
+provider "aws" {
+region = "us-east-1"
+}
+
+resource "aws_instance" "one" {
+ami = "ami-0ddc798b3f1a5117e"
+instance_type = var.instance_type
+count = var.instance_count
+tags = {
+Name = var.instance_name
+}
+}
+output "masthan" {
+value = [aws_instance.one]
+}
+---------------------------------------------------------------------------------------------------------------------------------
+## vim variable.tf
+variable "instance_type" {
+}
+
+variable "instance_count" {
+}
+
+variable "instance_name" {
+}
+-----------------------------------------------------------------------------------------------------------------------
+## dev.tfvars
+instance_type = "t2.micro"
+
+instance_count = 2
+
+instance_name = "dev.servr"
+-----------------------------------------------------------------------------------------------------------------------------
+## pod.tfvars
+instance_type = "t2.micro"
+
+instance_count = 1
+
+instance_name = "pod-server"
