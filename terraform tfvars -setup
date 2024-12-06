@@ -40,4 +40,4 @@ instance_type = "t2.micro"
 
 instance_count = 1
 
-instance_name = "pod-server"
+instance_name = "prod-server"
