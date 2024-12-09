@@ -1,6 +1,7 @@
-## workspace creation:
+## workspace creation:                                  // different workspace with different 
+ terraform workspace new test                           //workspace created.
  
-
+## server creation:
 provider "aws" {
 region = "us-east-1"
 }
