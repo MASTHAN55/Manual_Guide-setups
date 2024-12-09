@@ -1,3 +1,6 @@
+## workspace creation:
+ 
+
 provider "aws" {
 region = "us-east-1"
 }
@@ -55,7 +58,10 @@ variable "instance_name" {
 }
 
 Commands:
- 1. terraform init
+ 1. tarraform fmt
+ 1.1 terraform init
+
  2. terraform plan -var-file="test.tfvars" -auto-approve
  3. terraform apply -var-file="test.tfvars" -auto-approve
+ 4. terraform destroy -var-file="test.tfvars" -auto-approve
  
