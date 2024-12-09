@@ -1,4 +1,4 @@
-## vim main.tf                                           //different workspaces with different environment(dev,prod).
+## vim main.tf                                           //different workspaces with multiple environment(dev,prod,test).
 provider "aws" {
 region = "us-east-1"
 }
@@ -54,6 +54,7 @@ instance_name = "test-server"
 Commands:
  1. terraform plan -var-file="dev.tfvars" -auto-approve
  2. terraform apply -var-file="test.tfvars" -auto-approve
+ 3. rm -rf *.tfvars = remove all tfvars at a time.
 
 NOTE:
  check vars alignment properly step by step.
