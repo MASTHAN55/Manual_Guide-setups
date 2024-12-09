@@ -2,8 +2,7 @@
  1. terraform workspace new test [Do]                   // workspace created.
  2. terraform workspace select test [Do]                // switch to test workspace.
  
-## server creation:
-vim main.tf
+## server creation: vim main.tf
 provider "aws" {
 region = "us-east-1"
 }
@@ -27,6 +26,7 @@ Name = "${local.env}-subnet"
 }
 
 resource "aws_s3_bucket" "three" {
+bucket = "masthan-test.733"
 tags = {
 Name = "${local.env}"
 }
