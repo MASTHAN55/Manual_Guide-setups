@@ -56,5 +56,6 @@ variable "instance_name" {
 
 Commands:
  1. terraform init
- 2. terraform 
+ 2. terraform plan -var-file="test.tfvars" -auto-approve
+ 3. terraform apply -var-file="test.tfvars" -auto-approve
  
