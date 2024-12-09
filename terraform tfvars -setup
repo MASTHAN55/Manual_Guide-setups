@@ -57,4 +57,5 @@ Commands:
  3. rm -rf *.tfvars = remove all tfvars at a time.
 
 NOTE:
- check vars alignment properly step by step.
+1. check vars alignment properly step by step.
+2. it will over-ride, because it has default workspace.
