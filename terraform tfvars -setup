@@ -42,6 +42,14 @@ instance_count = 1
 
 instance_name = "prod-server"
 
+                              ---------------------------------------------------------------------------------------------------------------------
+## test.tfvars
+instance_type = "t2.micro"
+
+instance_count = 1
+
+instance_name = "test-server"
+
                                --------------------------------------------------------------------------------------------------------------------
 Commands:
  1. terraform apply -var-files="test.tfvars" -auto-approve.
