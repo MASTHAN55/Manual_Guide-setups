@@ -1,9 +1,6 @@
 ## workspace creation:                                  // different workspace with different environments(dev,prod,test).
- terraform workspace new test                           // workspace created.
- terraform workspace delete test
- terraform workspace select test
- terraform workspace show
- terraform workspace list
+ 1. terraform workspace new test [Do]                   // workspace created.
+ 2. terraform workspace select test [Do]
  
 ## server creation:
 vim main.tf
