@@ -1,6 +1,4 @@
-## workspace creation:
- 
-## vim main.tf                                           //different workspaces with multiple environments(dev,prod,test).
+## vim main.tf                                           //default workspaces with multiple environments(dev,prod,test).
 provider "aws" {
 region = "us-east-1"
 }
