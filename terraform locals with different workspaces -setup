@@ -1,5 +1,5 @@
 ## workspace creation:                                  // different workspace with different environments(dev,prod,test).
- terraform workspace new test                           //workspace created.
+ terraform workspace new test                           // workspace created.
  
 ## server creation:
 provider "aws" {
