@@ -36,4 +36,25 @@ Name = var.instance_name
 }
                                   ---------------------------------------------------------------------------------------------------------
 
+## vim test.tfvars
+instance_type = "t2.micro"
 
+instance_count = 1
+
+instance_name = "test-server"
+
+                                ----------------------------------------------------------------------------------------------------------------
+## vim variable.tf
+variable "instance_type" {
+}
+
+variable "instance_count" {
+}
+
+variable "instance_name" {
+}
+
+Commands:
+ 1. terraform init
+ 2. terraform 
+ 
