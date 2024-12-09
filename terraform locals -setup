@@ -2,7 +2,7 @@ provider "aws" {
 region = "us-east-1"
 }
 locals  {
-env = "test"
+env = "${terraform.workspace}"
 }
 
 resource "aws_vpc" "one" {
