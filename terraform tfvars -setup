@@ -1,4 +1,4 @@
-## vim main.tf                                           // different workspaces with different environment
+## vim main.tf                                           //different workspaces with different environment(dev,prod).
 provider "aws" {
 region = "us-east-1"
 }
@@ -42,5 +42,9 @@ instance_count = 1
 
 instance_name = "prod-server"
 
+                               --------------------------------------------------------------------------------------------------------------------
+Commands:
+ 1. terraform apply -var-files="test.tfvars" -auto-approve.
+
 NOTE:
- check vars elainment properly step by step.
+ check vars alignment properly step by step.
