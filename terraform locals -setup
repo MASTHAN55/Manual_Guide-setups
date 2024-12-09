@@ -1,1 +1,37 @@
+##terraform workspace new test     //creating workspace
+provider "aws" {
+region = "us-east-1"
+}
+locals  {
+env = "test"
+}
 
+resource "aws_vpc" "one" {
+cidr_block = "10.0.0.0/24"
+tags = {
+Name = "${local.env}-vpc"
+}
+}
+
+resource "aws_subnet" "two" {
+cidr_block = "10.0.0.0/25"
+vpc_id = aws_vpc.one.id
+tags = {
+Name = "${local.env}-subnet"
+}
+}
+
+resource "aws_s3_bucket" "three" {
+tags = {
+Name = "${local.env}"
+}
+}
+resource "aws_instance" "four" {
+subnet_id = aws_subnet.two.id
+ami = "ami-0ddc798b3f1a5117e"
+count = var.instance_count
+instance_type = var.instance_type
+tags = {
+Name = var.instance_name
+}
+}
