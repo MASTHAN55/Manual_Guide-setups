@@ -41,3 +41,6 @@ instance_type = "t2.micro"
 instance_count = 1
 
 instance_name = "prod-server"
+
+NOTE:
+ check vars elainment properly step by step.
