@@ -52,7 +52,8 @@ instance_name = "test-server"
 
                                --------------------------------------------------------------------------------------------------------------------
 Commands:
- 1. terraform apply -var-files="test.tfvars" -auto-approve.
+ 1. terraform plan -var-file="dev.tfvars" -auto-approve
+ 2. terraform apply -var-file="test.tfvars" -auto-approve
 
 NOTE:
  check vars alignment properly step by step.
