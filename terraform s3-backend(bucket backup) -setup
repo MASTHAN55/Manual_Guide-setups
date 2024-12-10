@@ -1,7 +1,7 @@
 terraform {                    // first create bucket by own, enable bucket versining.
 backend "s3" {
 bucket = "terraformbucket007"
-key = "terraform.tfstate"
+key = "terraform.tfstate"             //backup statefile
 region = "us-east-1"
 }
 }
