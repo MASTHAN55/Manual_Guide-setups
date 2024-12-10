@@ -1,4 +1,4 @@
-## workspace creation:                                  // different workspace with different environments(dev,prod,test).
+## workspace creation:                                  // different workspaces(dev,prod,test) with different environments(dev,prod,test).
  1. terraform workspace new test [Do]                   // workspace created.
  2. terraform workspace select test [Do]                // switch to test workspace.
  3. terraform workspace show [Do]                       // show current workspace.
