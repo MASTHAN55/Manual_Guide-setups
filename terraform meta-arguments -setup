@@ -1,1 +1,7 @@
+1. Depends-on:
+   depends_on = [
+   aws_s3_bucket.three
+   ]
 
+2. Count:
+   
