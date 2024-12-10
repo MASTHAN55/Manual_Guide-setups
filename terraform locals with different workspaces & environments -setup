@@ -1,6 +1,7 @@
 ## workspace creation:                                  // different workspace with different environments(dev,prod,test).
  1. terraform workspace new test [Do]                   // workspace created.
  2. terraform workspace select test [Do]                // switch to test workspace.
+ 3. terraform workspace show [Do]                       // show current workspace.
  
 ## server creation: vim main.tf
 provider "aws" {
@@ -34,8 +35,8 @@ Name = "${local.env}"
 resource "aws_instance" "four" {
 subnet_id = aws_subnet.two.id
 ami = "ami-0ddc798b3f1a5117e"
-count = var.instance_count
 instance_type = var.instance_type
+count = var.instance_count
 tags = {
 Name = var.instance_name
 }
