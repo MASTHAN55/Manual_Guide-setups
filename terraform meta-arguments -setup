@@ -1,7 +1,154 @@
-1. Depends-on:
-   depends_on = [
-   aws_s3_bucket.three
-   ]
+1. DEPENDS_ON: One resource creation depends on another resource.
+provider "aws" {
+}
 
-2. Count:
-   
+resource "aws_instance" "three" {
+  ami           = "ami-00b8917ae86a424c9"
+  instance_type = "t2.medium"
+  tags = {
+    Name = "n.virginia-server"
+  }
+  depends_on = [
+    aws_s3_bucket.three
+  ]
+}
+
+resource "aws_s3_bucket" "three" {
+  bucket = "rahamshaik00998877abc"
+}
+
+                              -------------------------------------------------------------------------------------------------------------
+2. COUNT:
+provider "aws" {
+}
+
+resource "aws_instance" "three" {
+  count         = length(var.instance_type)
+  ami           = "ami-00b8917ae86a424c9"
+  instance_type = var.instance_type[count.index]
+  tags = {
+    Name = var.instance_name[count.index]
+  }
+}
+
+variable "instance_type" {
+  type    = list(string)
+  default = ["t2.micro", "t2.medium", "t2.large"]
+}
+
+variable "instance_name" {
+  default = ["dev-server", "test-server", "prod-server"]
+}
+
+
+
+FOR_EACH: used to create unidentical objects.
+it will eliminates the duplicate values.
+
+
+
+resource "aws_instance" "two" {
+  for_each      = toset(["dev-server", "test-server", "prod-server"])
+  ami           = "ami-00b8917ae86a424c9"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "${each.key}"
+  }
+}
+
+                          ---------------------------------------------------------------------------------------------
+3. provent destroy: 
+provider "aws" {
+}
+
+resource "aws_instance" "two" {
+  ami           = "ami-0d7a109bf30624c99"
+  instance_type = "t2.nano"
+  tags = {
+    Name = "lucky-server"
+  }
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+                       -------------------------------------------------------------------------------------------------
+
+4. CREATE BEFORE DESTROY:  
+provider "aws" {
+}
+
+resource "aws_instance" "two" {
+  ami           = "ami-0d7a109bf30624c99"
+  instance_type = "t2.nano"
+  tags = {
+    Name = "lucky-server"
+  }
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+                      -----------------------------------------------------------------------------------------------
+
+5. ignore_changes:
+provider "aws" {
+}
+
+resource "aws_instance" "two" {
+  ami           = "ami-0d7a109bf30624c99"
+  instance_type = "t2.nano"
+  tags = {
+    Name = "lucky-server"
+  }
+  lifecycle {
+    ignore_changes = all
+  }
+}
+
+                                           --------------------------------------------------------------------------------------
+6. 
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_instance" "two" {
+  ami           = "ami-01376101673c89611"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "mumbai-server"
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+  alias  = "abcd"
+}
+
+resource "aws_instance" "three" {
+  provider      = aws.abcd
+  ami           = "ami-0d7a109bf30624c99"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "n-virginia"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
