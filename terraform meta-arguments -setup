@@ -40,12 +40,9 @@ variable "instance_name" {
   default = ["dev-server", "test-server", "prod-server"]
 }
 
-
-
+                              ------------------------------------------------------------------------------------------
 FOR_EACH: used to create unidentical objects.
 it will eliminates the duplicate values.
-
-
 
 resource "aws_instance" "two" {
   for_each      = toset(["dev-server", "test-server", "prod-server"])
