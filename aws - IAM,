@@ -1,0 +1,6 @@
+1. IAM -User Creation:
+   IAM --> users --> create users --> User name --> Provide user access to the AWS Management Console - optional[tick] --> I want to create an IAM user[tick] --> Custom password[tick]
+   --> Users must create a new password at next sign-in - Recommended[tick] optional --> next.
+   --> Attach policies directly[click] --> next --> create user.
+
+2. 
