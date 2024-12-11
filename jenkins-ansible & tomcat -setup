@@ -1,3 +1,4 @@
+                                                        [Ansible-Setup]
 1. Servers creation. 
    * cerate "5-servers" (1-ansible, 2-dev_servers, 2-test_server).
    * passwd root                                                        // set password for root user.
