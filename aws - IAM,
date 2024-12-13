@@ -7,11 +7,11 @@
 2. STS policy creation: [manual]
    1. Create group (Create group --> User group name(testing-group) --> create group).
    2. Create users (Create user --> User name(dev-user) --> Provide user access to the AWS Management Console[tick] --> I want to create an IAM user[tick] 
-      --> Custom password[tick] --> next --> user creation).
+      --> Custom password[tick] --> next --> create user).
 
    3. Create roles (create role --> AWS account[tick] --> This account[tick] --> next --> Permissions policies(S3FullAccess..) --> Role name(dev-role) --> create role).
-   4. Create policy (create policy --> sts --> next --> All STS actions(sts:*) --> Resources(All) --> next --> Policy name --> create).
+   4. Create policy (create policy --> sts --> All STS actions(sts:*) --> Resources(All) --> next --> Policy name(dev-policy) --> create).
 
    Note:
    * sts policy attach to group:
-     1. click usergroup --> testing-group --> Permissions --> add permissions --> Customer managed[click] --> sts-policy[click]--> attach polocies.
+     1. click usergroup --> testing-group --> Permissions --> add permissions(attach-policy) --> Customer managed[click] --> dev-policy[tick]--> attach polocies.
