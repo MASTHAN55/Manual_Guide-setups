@@ -4,7 +4,9 @@
    --> Users must create a new password at next sign-in - Recommended[tick] optional --> next.
    --> Attach policies directly[click] --> next --> create user.
 
-2. STS policy creation: [manual]
+                                    ------------------------------------------------------------------------------------
+                                                                       
+2. STS policy creation: [manual]  switch user to particular role.
    1. Create group (Create group --> User group name(testing-group) --> create group).
    2. Create users (Create user --> User name(dev-user) --> Provide user access to the AWS Management Console[tick] --> I want to create an IAM user[tick] 
       --> Custom password[tick] --> next --> create user).
