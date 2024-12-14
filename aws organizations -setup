@@ -2,7 +2,7 @@
 1. Organization Setup:
    Search aws organizations --> Create organization --> invite an existing aws account(tick) --> Email address or account ID of the AWS accounts to invite(ccit-0542845245) 
    --> Send invitation.
-2. checking & accepting:
+2. checking & accepting: [check ccit-0542845245 account].
    search aws origanizations --> view 1 invetation[click] --> accept invetation. 
 
 3. Create Service controle policies(scp):
