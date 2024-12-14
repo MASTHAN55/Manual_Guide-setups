@@ -1,14 +1,23 @@
-1. Organization Setup: [Do owner-account]
+                                                                         [Do owner-account]
+1. Organization Setup:
    Search aws organizations --> Create organization --> invite an existing aws account(tick) --> Email address or account ID of the AWS accounts to invite(ccit-0542845245) 
    --> Send invitation.
-2. checking & accepting: [DO owner-account]
+2. checking & accepting:
    search aws origanizations --> view 1 invetation[click] --> accept invetation. 
 
-3. Create Service controle policies(scp): [Do owner account].
+3. Create Service controle policies(scp):
    search aws origanizations --> policies --> Service controle policies[click] --> Enable service controle policies --> Create policy --> policy name(restrict-leave)
    --> Add new statement --> leave origanization(Deny) --> Create policy.
 4. Attach policy to users:
-   --> actions --> attach policy(ccit-0542845245) tick --> attach policy.
+   actions --> attach policy(ccit-0542845245) tick --> attach policy.
+
+5. create unit = group: 
+   aws organizations --> aws accounts --> root(tick) --> Actions --> Create new --> Organizational unit name(unit-1) --> create Organizational unit.
+   aws accounts --> ccit-0542845245(tick) --> acctions --> move --> unit-1(tick) --> move aws account.
+6. Conditions for user:
    
+   
+   
+    
    
    
