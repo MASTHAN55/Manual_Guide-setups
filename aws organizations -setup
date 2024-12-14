@@ -14,7 +14,12 @@
 5. create unit = group: 
    aws organizations --> aws accounts --> root(tick) --> Actions --> Create new --> Organizational unit name(unit-1) --> create Organizational unit.
    aws accounts --> ccit-0542845245(tick) --> acctions --> move --> unit-1(tick) --> move aws account.
+
+                                           [IAM identity center]
 6. Conditions for user:
+   policys --> add conditions --> give permisions.
+   
+   
    
    
    
