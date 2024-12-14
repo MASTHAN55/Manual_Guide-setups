@@ -4,7 +4,7 @@
 2. checking & accepting: [DO owner-account]
    search aws origanizations --> view 1 invetation[click] --> accept invetation. 
 
-3. Create Service controle policies(scp): [Do owner account]
+3. Create Service controle policies(scp): [Do owner account].
    search aws origanizations --> policies --> Service controle policies[click] --> Enable service controle policies --> Create policy --> policy name(restrict-leave)
    --> Add new statement --> leave origanization(Deny) --> Create policy.
 4. Attach policy to users:
