@@ -1,0 +1,2 @@
+create ci job --> configur --> throttle builds --> number of builds[3] --> time period:hours --> save.
+it will tacke 20min for build to build.
