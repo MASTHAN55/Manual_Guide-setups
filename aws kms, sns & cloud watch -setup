@@ -20,3 +20,17 @@
 4. user login:
    login user(user-1) --> s3 bucket --> baji-5485(click) --> click objets & open [if we can see encrypted objects, its working].
 
+                                        ------------------------------------------------------------------------------------------
+                                                                   [SNS]
+1.
+
+
+
+
+
+
+
+
+
+
+
