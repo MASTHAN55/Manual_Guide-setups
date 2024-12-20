@@ -9,7 +9,7 @@
    search aws origanizations --> policies --> Service controle policies[click] --> Enable service controle policies --> Create policy --> policy name(restrict-leave)
    --> Add new statement --> leave origanization(Deny) --> Create policy.
 4. Attach policy to users:
-   actions --> attach policy(ccit-0542845245) tick --> attach policy.
+   actions --> attach policy(ccit-0542845245)tick --> attach policy.
 
 5. create unit = group: 
    aws organizations --> aws accounts --> root(tick) --> Actions --> Create new --> Organizational unit name(unit-1) --> create Organizational unit.
