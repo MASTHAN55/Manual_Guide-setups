@@ -1,11 +1,22 @@
-1. user create:
-   
-1. KMS
+                                                                       [KMS]
+1. user create: [create 2-users]
+    users names:
+    1. user-1 (admin-fullaccess)
+    2. user-2 (s3-fullaccess)
+   IAM --> users --> create users --> User name(user-1) --> Provide user access to the AWS Management Console - optional[tick] --> I want to create an IAM user[tick] 
+   --> Custom password[tick].
+   --> Users must create a new password at next sign-in - Recommended[tick] optional --> next.
+   --> Attach policies directly[click] --> give permissions --> next --> create user.
+
+2. KMS:
    search kms --> create a key(symmetric) masthan-key --> key usage(encrypt and decrypt) --> advanced options(kms) --> single region key --> next.
    add labels(alias) --> next.
-   define key administrative permissions --> create user adminuser(give-adminaccess) --> keyndeleteion(tick) --> keyusers(masthan-key) --> next --> finish.
+   define key administrative permissions --> create user adminuser(user-1) --> keyndeleteion(tick) --> keyusers(user-2) --> next --> finish.
 
-2. create bucket:
-   create bucket --> Bucket name --> Bucket Versioning(enable) --> Dual-layer server-side encryption with AWS Key Management Service keys (DSSE-KMS) click 
-   AWS KMS key --> Choose from your AWS KMS keys(click) --> Available AWS KMS keys(select created-key) --> create bucket.
+3. create bucket:
+   create bucket --> Bucket name(baji-5485) --> Bucket Versioning(enable) --> Dual-layer server-side encryption with AWS Key Management Service keys (DSSE-KMS) click 
+   AWS KMS key --> Choose from your AWS KMS keys(click) --> Available AWS KMS keys(user-2) --> create bucket.
+
+4. user login:
+   login user(user-1) --> s3 bucket --> baji-5485(click) --> click objets & open [if we can see encrypted objects, its working].
 
