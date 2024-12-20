@@ -1,2 +1,9 @@
 1. KMS
-   search kms --> create a key --> Customer-managed keys --> 
+   search kms --> create a key(symmetric) masthan-key --> key usage(encrypt and decrypt) --> advanced options(kms) --> single region key --> next.
+   add labels(alias) --> next.
+   define key administrative permissions --> create user adminuser(give-adminaccess) --> keyndeleteion(tick) --> keyusers(masthan-key) --> next --> finish.
+
+2. create bucket:
+   create bucket --> Bucket name --> Bucket Versioning(enable) --> Dual-layer server-side encryption with AWS Key Management Service keys (DSSE-KMS) click 
+   AWS KMS key --> Choose from your AWS KMS keys(click) --> Available AWS KMS keys(select created-key) --> create bucket.
+
