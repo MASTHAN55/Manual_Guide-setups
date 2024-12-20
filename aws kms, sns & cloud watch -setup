@@ -1,3 +1,5 @@
+1. user create:
+   
 1. KMS
    search kms --> create a key(symmetric) masthan-key --> key usage(encrypt and decrypt) --> advanced options(kms) --> single region key --> next.
    add labels(alias) --> next.
