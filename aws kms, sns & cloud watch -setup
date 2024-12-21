@@ -1,8 +1,9 @@
                                                                        [KMS]
-1. user create: [create 2-users]
+1. user create: [create 3-users]
     users names:
     1. user-1 (admin-fullaccess)
-    2. user-2 (s3-fullaccess)
+    2. user-2 (s3-fullaccess -attach key-user)
+    3. user-3 (s3-fullaccess)
    IAM --> users --> create users --> User name(user-1) --> Provide user access to the AWS Management Console - optional[tick] --> I want to create an IAM user[tick] 
    --> Custom password[tick].
    --> Users must create a new password at next sign-in - Recommended[tick] optional --> next.
@@ -18,7 +19,7 @@
    AWS KMS key --> Choose from your AWS KMS keys(click) --> Available AWS KMS keys(user-2) --> create bucket.
 
 4. user login:
-   login user(user-1) --> s3 bucket --> baji-5485(click) --> click objets & open [if we can see encrypted objects, its working].
+   login user(user-3) --> s3 bucket --> baji-5485(click) --> click objets & open [if we can see encrypted objects, its working].
 
                                         ------------------------------------------------------------------------------------------
                                                                    [SNS]
