@@ -1,10 +1,10 @@
 1. s3-creation:
    search s3 --> Create bucket --> General purpose --> Bucket name(masthan8985745) --> Bucket Versioning(Enable) --> create bucket.
 
-2. presigned URL creation: [for everyone image access perticular time]
+2. presigned URL creation: [for everyone image access limited time]
    image(tick) --> actions(share with a presigned URL) --> Minutes(1) or Hours(1) --> create presigned URL.
 
-3. public all buckets:
-   1. search s3 --> Permissions --> Block public access (bucket settings) Edit --> Block all public access(un-tick) --> save changes. 
-   2. Permissions --> Object Ownership(edit) --> ACLs enabled(tick) --> I acknowledge that ACLs will be restored(tick) --> save changes. 
-   3. image(tick) --> make publick using ACL --> make public. 
+3. make public particular bucket:
+    1. search s3 --> Permissions --> Block public access (bucket settings) Edit --> Block all public access(un-tick) --> save changes. 
+    2. Permissions --> Object Ownership(edit) --> ACLs enabled(tick) --> I acknowledge that ACLs will be restored(tick) --> save changes. 
+    3. image(tick) --> Actions --> make publick using ACL --> make public. 
