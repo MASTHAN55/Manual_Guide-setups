@@ -12,4 +12,11 @@
     1. search s3 --> Permissions --> Block public access (bucket settings) Edit --> Block all public access(un-tick) --> save changes [you did only bucket-public].
     2. Bucket policy(edit) --> policy generator --> Select Type of Policy(s3) --> Principal(*) --> Actions(all actions) --> Amazon Resource Name (ARN) copy ARN " /* " -->
        generate policy --> copy and paste code(in bucket policy).
-    
+
+4. chanage storage class:
+   upload --> Properties --> select wt u need.
+   1. Glacier Flexible Retrieval (formerly Glacier).
+      click on image-name --> initiate restore --> Number of days that the restored copy is available(10) --> Retrieval tier(select wt u need) --> initiate restore.
+
+5. Create lifecycle rule:
+   1. Lifecycle rule name --> Choose a rule scope --> 
