@@ -24,6 +24,16 @@ Note:-
 6. connecting igw to publick route:
     Route tables --> routes --> edit routes --> add routes --> 0.0.0.0/0 / internet gate way / igw(click) / select masthan-igw --> save changes. 
 
+7. ec2:
+   * create -2 instances public & private with all traffic.
+     1. select masthan-vpc.
+     2. select public or private subnet.
+     3. Auto-assign public IP(Enable).
+     4.  all trafic --> create instance --> actions --> security --> get windows password --> upload private key file --> decrypt password[save user-name & pswd]
+         --> windows+r(mstsc) --> give user name & passwd --> connect --> ok.
+    
+     
+
 
    
    
