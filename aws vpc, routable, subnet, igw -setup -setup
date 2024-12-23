@@ -31,7 +31,7 @@ Note:-
      3. Auto-assign public IP(Enable).
      4. all trafic --> create instance, 
         actions --> security --> get windows password --> upload .pem file --> decrypt password[save user-name & pswd]
-        --> windows+r(mstsc) --> give user name & passwd --> connect --> ok.
+        --> windows+r(mstsc) --> give user name & passwd --> connect --> yes --> ok.
     
      
 
