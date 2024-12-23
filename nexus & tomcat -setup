@@ -1,4 +1,4 @@
-[Nexus-Setup]:
+                                                                           [Nexus-Setup]
 * Need: (all-importent)
   vim nexus.sh
   t2.medium, java-1.8.0, port:8081
@@ -51,8 +51,9 @@ pipeline {
 }
 
 URL(copy & paste) --> broswe --> click on netflix.war --> path click --> keep --> download to local.
+                                             -------------------------------------------------------------------------------------------
 
-[Tomcat -Setup]:
+                                                                  [Tomcat -Setup]
  port :8080
  vim tomcat.sh [better to chose updated version]
 
