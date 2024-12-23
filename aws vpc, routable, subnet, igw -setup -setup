@@ -1,15 +1,30 @@
-                                                                   [VPC]
+                                                                           [VPC]
+Note:-
+    * vpc -1, [1.0.0.0/24] 256-ips.
+    * Create subnets -2 [public-[10.0.0.0/25] 128-ips, ap-south-1a] -- [private-[10.0.0.128/25] 128-ips, ap-south-1b].
+    * routables -2 [public, private].
+    * create igw -1
+
 1. vpc creation: [Do what u need at particular time]
    search vpc --> create vpc --> VPC only(tick) --> Name tag(masthan-vpc) --> IPv4 CIDR manual input(tick) --> IPv4 CIDR(10.0.0.0/24) --> create vpc.
 
-2. "Route table" automatically created after vpc creation [edit name].
+2. "Route table & security group" automatically created after vpc creation [edit name for public route].
+    create Route table -->Name(private) --> VPC(masthan-vpc) --> create route table.
 
-3. create subnet:
-   create subnet --> VPC ID(masthan-vpc) --> Subnet name(masthan-subnet) --> Availability Zone(select wt u need) --> IPv4 subnet CIDR block(10.0.0.0/25) 
+3. create subnet: [Do public & private]
+   create subnet --> VPC ID(masthan-vpc) --> Subnet name(public-subnet) --> Availability Zone(ap-south-1a) --> IPv4 subnet CIDR block(10.0.0.0/25) 
    --> create subnet.
-
 4. Internet gateway:
    Create internet gateway --> Name tag(masthan-igw) --> Create internet gateway.
    Actions --> Attach to VPC --> Available VPCs(masthan-vpc) --> attach internet gate way.
+
+5. Attaching route tables to subnets: [Do public & private]
+   Route tables --> public(tick) -->  subnet associations --> Edit subnet associations --> public-subnet(click) --> save associations.
+
+6. connecting igw to publick route:
+    Route tables --> routes --> edit routes --> add routes --> 0.0.0.0/0 / internet gate way / igw(click) / select masthan-igw --> save changes. 
+
+
+   
    
 
