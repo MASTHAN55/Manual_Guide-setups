@@ -1,6 +1,6 @@
                                                                        [KMS]
 1. user create: [create 3-users]
-    users names:
+  * users names:
     1. user-1 (admin-fullaccess)
     2. user-2 (s3-fullaccess -attach key-user)
     3. user-3 (s3-fullaccess)
