@@ -25,7 +25,7 @@ Note:-
     Route tables --> routes --> edit routes --> add routes --> 0.0.0.0/0 / internet gate way / igw(click) / select masthan-igw --> save changes. 
 
 7. ec2:
-   * create -2 instances public & private with all traffic.
+   * create -2 windows-os instances public & private with all traffic.
      1. select masthan-vpc.
      2. select public or private subnet.
      3. Auto-assign public IP(Enable).
