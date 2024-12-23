@@ -8,7 +8,7 @@
    create subnet --> VPC ID(masthan-vpc) --> Subnet name(masthan-subnet) --> Availability Zone(select wt u need) --> IPv4 subnet CIDR block(10.0.0.0/25) 
    --> create subnet.
 
-3. Internet gateway:
+4. Internet gateway:
    Create internet gateway --> Name tag(masthan-igw) --> Create internet gateway.
    Actions --> Attach to VPC --> Available VPCs(masthan-vpc) --> attach internet gate way.
    
