@@ -42,7 +42,7 @@ Note:-
    search(windows definder fire wall) --> inbound rules --> new rule --> port(next) --> specfic local port(8080) --> 2-nexts --> name(masthan) --> finish.
 
                                          [NAT gate way]
-10. giving internet for private subnet using NAT gate way.
+10. giving internet for private subnet using NAT gate way throw publick subnet.
     create NAT gate way --> Name(masthan-nat) --> Subnet(public-subnet) --> Connectivity type(public) --> Elastic IP allocation ID --> create NAT gateway.
     Route tables(private) -->  routes(Edit routes) --> add routes --> 0.0.0.0/0 / nat gate way / --> save changes. 
    
