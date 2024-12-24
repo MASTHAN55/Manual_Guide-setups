@@ -32,7 +32,9 @@ Note:-
      4. all trafic --> create instance, 
         actions --> security --> get windows password --> upload .pem file --> decrypt password[save user-name & pswd]
         --> windows+r(mstsc) --> give user name & passwd --> connect --> yes --> ok.
-    
+
+8. 
+   click on windows --> server manager --> add roles and features --> 3-times next --> server roles(web server) tick --> add features --> all next --> install. 
      
 
 
