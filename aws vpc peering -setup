@@ -1,1 +1,4 @@
-
+      creation:
+1. vpc -2 [vpc-1, 10.0.0.0/24, vpc-2, 11.0.0.0/24]
+2. subnets -4 [public-2, private-2]
+3. 
