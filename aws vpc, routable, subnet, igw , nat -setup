@@ -38,7 +38,13 @@ Note:-
    click on folder symbol --> windows(c): --> inetpub --> wwwroot --> iisstart [if we can see its downloded] --> copy instance public ip --> paste on broswer.
 
 9. hosting own website:
-   
+   windows+r(intmgr) --> start page(right click) --> Add website --> site name(masthan) --> physical state(select web) --> port(8080) --> hostname(masthan) --> ok. 
+   search(windows definder fire wall) --> inbound rules --> new rule --> port(next) --> specfic local port(8080) --> 2-nexts --> name(masthan) --> finish.
+
+                                         [NAT gate way]
+10. giving internet for private subnet using NAT gate way.
+    create NAT gate way --> Name(masthan-nat) --> Subnet(public-subnet) --> Connectivity type(public) --> Elastic IP allocation ID --> create NAT gateway.
+    Route tables(private) -->  routes(Edit routes) --> add routes --> 0.0.0.0/0 / nat gate way / --> save changes. 
    
 
 
