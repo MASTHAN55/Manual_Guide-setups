@@ -33,9 +33,13 @@ Note:-
         actions --> security --> get windows password --> upload .pem file --> decrypt password[save user-name & pswd]
         --> windows+r(mstsc) --> give user name & passwd --> connect --> yes --> ok.
 
-8. 
-   click on windows --> server manager --> add roles and features --> 3-times next --> server roles(web server) tick --> add features --> all next --> install. 
-     
+8. IIS server configuration:
+   click on windows symbol --> server manager --> add roles and features --> 3-times next --> server roles(web server iis) tick --> add features --> all next --> install. 
+   click on folder symbol --> windows(c): --> inetpub --> wwwroot --> iisstart [if we can see its downloded] --> copy instance public ip --> paste on broswer.
+
+9. hosting own website:
+   
+   
 
 
    
