@@ -4,8 +4,11 @@
    search vpc --> create vpc --> VPC only(tick) --> Name tag(masthan-vpc) --> IPv4 CIDR manual input(tick) --> IPv4 CIDR(10.0.0.0/24) --> create vpc.
 
 2. subnets -4 [vpc-1 public, vpc-1 private] [vpc-2 public. vpc-2 private] [11.0.0.128/25, 10.0.0.128/25]
+   create subnet --> VPC ID(masthan-vpc) --> Subnet name(public-subnet) --> Availability Zone(ap-south-1a) --> IPv4 subnet CIDR block(10.0.0.0/25) 
+   --> create subnet.
 
 3. igw -2 [attach vpc-1, attach vpc-2]
+   
 4. route tables -4 [vpc-1 public, vpc-1 private] [vpc-2 public, vpc-2 private] 
 5. routables - edit "routes" "subnet associate" 
 6. create vpc peering:
