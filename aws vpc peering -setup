@@ -1,6 +1,7 @@
                                                                  [vpc-peering]
                                 [creation]
 1. vpc -2 [vpc-1, 10.0.0.0/24, vpc-2, 11.0.0.0/24] with different cidr range -mandatory
+   search vpc --> 
 2. subnets -4 [vpc-1 public, vpc-1 private] [vpc-2 public. vpc-2 private] [11.0.0.128/25, 10.0.0.128/25]
 3. igw -2 [attach vpc-1, attach vpc-2]
 4. route tables -4 [vpc-1 public, vpc-1 private] [vpc-2 public, vpc-2 private] 
