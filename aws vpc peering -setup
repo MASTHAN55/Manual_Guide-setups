@@ -1,18 +1,18 @@
                                                                  [vpc-peering]
                                 [creation]
 1. vpc -2 [vpc-1, 10.0.0.0/24, vpc-2, 11.0.0.0/24] with different cidr range -mandatory
-   search vpc --> create vpc --> VPC only(tick) --> Name tag(masthan-vpc) --> IPv4 CIDR manual input(tick) --> IPv4 CIDR(10.0.0.0/24) --> create vpc.
+   search vpc --> create vpc --> VPC only(tick) --> Name tag(vpc-1) --> IPv4 CIDR manual input(tick) --> IPv4 CIDR(10.0.0.0/24) --> create vpc.
 
-2. subnets -4 [vpc-1 public, vpc-1 private] [vpc-2 public. vpc-2 private] [11.0.0.128/25, 10.0.0.128/25]
-   create subnet --> VPC ID(masthan-vpc) --> Subnet name(public-subnet) --> Availability Zone(ap-south-1a) --> IPv4 subnet CIDR block(10.0.0.0/25) 
+2. subnets -4 [vpc-1 public, vpc-1 private] [vpc-2 public, vpc-2 private] [11.0.0.128/25, 10.0.0.128/25]
+   create subnet --> VPC ID(vpc-1) --> Subnet name(public-subnet) --> Availability Zone(ap-south-1a) --> IPv4 subnet CIDR block(10.0.0.0/25) 
    --> create subnet.
 
-3. igw -2 [attach vpc-1, attach vpc-2]
+3. igw -2 [attach vpc-1]
    Create internet gateway --> Name tag(masthan-igw) --> Create internet gateway.
-   Actions --> Attach to VPC --> Available VPCs(masthan-vpc) --> attach internet gate way.
+   Actions --> Attach to VPC --> Available VPCs(vpc-1) --> attach internet gate way.
    
 4. route tables -4 [vpc-1 public, vpc-1 private] [vpc-2 public, vpc-2 private]
-   create routable --> Name(masthan-route) --> VPC()
+   create Route table --> Name(public) --> VPC(vpc-1) --> create route table.
 
 5. routables - edit "routes" "subnet associate"
    Route tables --> public(tick) -->  subnet associations --> Edit subnet associations --> public-subnet(click) --> save associations.
@@ -24,3 +24,7 @@
 
   copy "vpc-1 public" vpc's ipv4 cidr and "vpc-2 private" --> routables --> routes --> edit routes --> paste ipv4 cidr --> save changes. 
   copy "vpc-2 private" vpc's ipv4 cidr and "vpc-1 public" --> routables --> routes --> edit routes --> paste ipv4 cidr --> save chnages.
+
+7. Ec2 creation:
+   1. create -3 servers [public-vpc1, private-vpc1] [private-vpc2]
+   2. mstsc --> connect vpc-1 public --> connect vpc-2 private.
