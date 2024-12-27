@@ -5,3 +5,10 @@
 3. igw -2 [attach vpc-1, attach vpc-2]
 4. route tables -4 [vpc-1 public, vpc-1 private] [vpc-2 public, vpc-2 private] 
 5. routables - edit "routes" "subnet associate" 
+6. create vpc peering:
+  Peering connections --> Create peering connection --> Name(masthan-peering) --> VPC ID(Requester) vpc-1 --> Account --> Region --> VPC ID(Accepter) --> VPC ID (Accepter) vpc-2
+  --> create peeringconnection.
+  Actions --> accept request.
+
+  copy "vpc-1 public" vpc's ipv4 cidr and "vpc-2 private" --> routables --> routes --> edit routes --> paste ipv4 cidr --> save changes. 
+  copy "vpc-2 private" vpc's ipv4 cidr and "vpc-1 public" --> routables --> routes --> edit routes --> paste ipv4 cidr --> save chnages.
