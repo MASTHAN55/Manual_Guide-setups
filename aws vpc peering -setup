@@ -26,5 +26,12 @@
   copy "vpc-2 private" vpc's ipv4 cidr and "vpc-1 public" --> routables --> routes --> edit routes --> paste ipv4 cidr --> save chnages.
 
 7. Ec2 creation:
-   1. create -3 servers [public-vpc1, private-vpc1] [private-vpc2]
-   2. mstsc --> connect vpc-1 public, public ip --> connect vpc-2 private, private ip.
+   * create -2, with "windows-os" instances public & private with all traffic.
+     1. select masthan-vpc.
+     2. select public or private subnet.
+     3. Auto-assign public IP(Enable).
+     4. all trafic --> create instance, 
+        actions --> security --> get windows password --> upload .pem file --> decrypt password[save user-name & pswd]
+        --> windows+r(mstsc) --> give user name & passwd --> connect --> yes --> ok.
+
+     5. mstsc --> connect vpc-1 public, public ip --> connect vpc-2 private, private ip.
