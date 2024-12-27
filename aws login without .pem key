@@ -1,0 +1,8 @@
+1. create normal ec2 instance and login.
+2. sudo -i
+3. vim /etc/ssh/sshd_config
+4. line no-63 (PasswordAuthentication yes)
+5. service sshd restart
+6. sudo passwd root [give own password] `incase if you want to give own user, give own name as root place. Ex:sudo passwd masthan
+7. ssh root@public-ip of ec2
+8. give password and login.
