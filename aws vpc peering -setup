@@ -27,4 +27,4 @@
 
 7. Ec2 creation:
    1. create -3 servers [public-vpc1, private-vpc1] [private-vpc2]
-   2. mstsc --> connect vpc-1 public --> connect vpc-2 private.
+   2. mstsc --> connect vpc-1 public, public ip --> connect vpc-2 private, private ip.
