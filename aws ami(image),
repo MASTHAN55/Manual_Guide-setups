@@ -1,1 +1,5 @@
+1. ami(image)
+   create instance(with source) --> actions --> image and templetes --> create image --> Image name(masthan-image) --> create image.
+   create new instance with masthan-image ami.
 
+2. 
