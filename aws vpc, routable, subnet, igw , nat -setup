@@ -33,11 +33,11 @@ Note:-
         actions --> security --> get windows password --> upload .pem file --> decrypt password[save user-name & pswd]
         --> windows+r(mstsc) --> give user name & passwd --> connect --> yes --> ok.
 
-8. IIS server configuration:
+8. IIS server configuration: -- [opptional]
    click on windows symbol --> server manager --> add roles and features --> 3-times next --> server roles(web server iis) tick --> add features --> all next --> install. 
    click on folder symbol --> windows(c): --> inetpub --> wwwroot --> iisstart [if we can see its downloded] --> copy instance public ip --> paste on broswer.
 
-9. hosting own website:
+9. hosting own website: -- [opptional]
    windows+r(intmgr) --> start page(right click) --> Add website --> site name(masthan) --> physical state(select web) --> port(8080) --> hostname(masthan) --> ok. 
    search(windows definder fire wall) --> inbound rules --> new rule --> port(next) --> specfic local port(8080) --> 2-nexts --> name(masthan) --> finish.
 
