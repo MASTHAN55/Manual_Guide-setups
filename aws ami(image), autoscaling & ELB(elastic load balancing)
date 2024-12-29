@@ -1,5 +1,13 @@
-1. ami(image)
+1. AMI(image):
    create instance(with source) --> actions --> image and templetes --> create image --> Image name(masthan-image) --> create image.
    create new instance with masthan-image ami.
 
-2. 
+2. ELB(Elastic Load Balancing): [Do both servers same]
+   1. server creation:
+      create 2-servers --> yum install httpd -y --> service httpd start --> service httpd status --> vim index.html(<h1> welcome to webserver one <h1>) --> service httpd restart
+   
+   2. Target Groups:
+      create target groups --> instance --> Target group name(target-1) --> Protocol : Port --> VPC --> next --> Available instances --> include as pending below --> create group. 
+
+   3. 
+      
