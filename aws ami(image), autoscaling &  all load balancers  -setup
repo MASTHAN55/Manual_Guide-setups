@@ -1,0 +1,33 @@
+1. AMI(image):
+   create instance(with source) --> actions --> image and templetes --> create image --> Image name(masthan-image) --> create image.
+   create new instance with masthan-image ami.
+                               ---------------------------------------------------------------------------------------------
+                                          [Do what you need at particular time]
+2. ALB(Application Load Balancer): [Do both servers same]
+   1. server creation:
+      create 2-servers --> yum install httpd -y --> service httpd start --> service httpd status --> vim index.html(<h1> welcome to webserver one <h1>) --> service httpd restart
+   
+   2. Target Groups:
+      create target group --> Instances --> Target group name(target) --> Protocol : Port(http:80) --> VPC --> next --> Available instances(select all) -->
+      include as pending below --> create target group.
+
+      * trafic equal sharing:
+        target groups --> Attributes --> Traffic configuration(Least outstanding requests) tick --> save changes.
+
+      * All trafic convert single server:  --[optional]
+        target groups --> Attributes --> Stickiness(tick) --> Load balancer generated cookie(tick) select time --> save changes.
+
+      * 2-target groups equal trafic sharing: --[optional]
+        create 8080 server.
+        create target group --> Instances --> Target group name(target-8080) --> Protocol : Port(http:80) --> VPC --> next --> Available instances(select 8080 server) -->
+        include as pending below --> create target group.
+        load balancer --> listeners and rules --> add listener --> protocal:port(http:8080) -- select 8080 target group --> add.
+        security group --> Allow 8080 port --> save changes.
+
+   3. load balancer:
+       create load balancer --> Application Load Balancer(create) --> Load balancer name(load-1) --> VPC --> Availability Zones
+       --> Security groups(allow "inbound" http 80 port) --> Default action(select group) --> create load balancer.
+
+ 3. NLB(network load balancing):
+    
+      
