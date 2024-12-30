@@ -14,7 +14,7 @@
       * trafic equal sharing:
         target groups --> Attributes --> Traffic configuration(Least outstanding requests) tick --> save changes.
 
-      * All trafic convert single server:  --[optional]
+      * All trafic convert to single server:  --[optional]
         target groups --> Attributes --> Stickiness(tick) --> Load balancer generated cookie(tick) select time --> save changes.
 
       * 2-target groups equal trafic sharing: --[optional]
@@ -23,11 +23,17 @@
         include as pending below --> create target group.
         load balancer --> listeners and rules --> add listener --> protocal:port(http:8080) -- select 8080 target group --> add.
         security group --> Allow 8080 port --> save changes.
+        copy loadbalancing DNS/8080 in broswer.
 
    3. load balancer:
        create load balancer --> Application Load Balancer(create) --> Load balancer name(load-1) --> VPC --> Availability Zones
        --> Security groups(allow "inbound" http 80 port) --> Default action(select group) --> create load balancer.
+                                 ----------------------------------------------------------------------------------------------------
 
- 3. NLB(network load balancing):
+ 3. NLB(network load balancer):   
+    create target group with protocol:port(tcp:80).
+    
+    
+
     
       
