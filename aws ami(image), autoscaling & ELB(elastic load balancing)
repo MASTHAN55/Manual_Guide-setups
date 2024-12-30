@@ -1,13 +1,19 @@
 1. AMI(image):
    create instance(with source) --> actions --> image and templetes --> create image --> Image name(masthan-image) --> create image.
    create new instance with masthan-image ami.
-
-2. ELB(Elastic Load Balancing): [Do both servers same]
+                               ---------------------------------------------------------------------------------------------
+                                          [Do what you need at particular time]
+2. ALB(Application Load Balancer): [Do both servers same]
    1. server creation:
       create 2-servers --> yum install httpd -y --> service httpd start --> service httpd status --> vim index.html(<h1> welcome to webserver one <h1>) --> service httpd restart
    
    2. Target Groups:
-      create target groups --> instance --> Target group name(target-1) --> Protocol : Port --> VPC --> next --> Available instances --> include as pending below --> create group. 
+      create target group --> Instances --> Target group name(target) --> Protocol : Port(htt-80) --> VPC --> next --> Available instances(select all) -->
+      include as pending below --> create target group.
 
-   3. 
+   3. load balancer:
+      create load balancer --> Application Load Balancer(create) --> Load balancer name(load-1) --> VPC --> Availability Zones
+      --> Security groups(allow "inbound" http 80 port) --> Default action(select group) --> create load balancer.
+
+   4. 
       
