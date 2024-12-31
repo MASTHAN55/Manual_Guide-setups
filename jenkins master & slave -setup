@@ -4,13 +4,13 @@
     2-servers (install java 11 or 17) [amazon-linux-extras install java-openjdk11 -y, sudo yum install -y java-17-amazon-corretto, 
     yum install git java-1.8.0-openjdk maven -y]    // install both servers.
        
-* Slave Setup:
-  1. manage jenkins ---> nodes ---> new node ---> node name:masthan ---> parmenent agent ---> save.
-     number of executors: 3 --> remote root directory: /tmp --> labels: slave-1 --> usage: lost-option --> launch method: last-option ---> host:(private-ip of slave)
-     creadentials ---> ssh username with private key --> Id: slave-1 --> user: ec2-user --> pemfile of jenkins server ---> save ---> hostkey verification statagy: last option.
+ 2. Slave Setup:
+    1. manage jenkins ---> nodes ---> new node ---> node name:masthan ---> parmenent agent ---> save.
+       number of executors: 3 --> remote root directory: /tmp --> labels: slave-1 --> usage: lost-option --> launch method: last-option ---> host:(private-ip of slave)
+       creadentials ---> ssh username with private key --> Id: slave-1 --> user: ec2-user --> pemfile of jenkins server ---> save ---> hostkey verification statagy: last option.
 
-* Build Restrict: (this option only we can see free-style project only, not-pipeline)
-  Dashbord ---> job ---> configur ---> restrict where this job run ---> label:slave-1 ---> save.
+ 3. Build Restrict: (this option only we can see free-style project only, not-pipeline)
+    Dashbord ---> job ---> configur ---> restrict where this job run ---> label:slave-1 ---> save.
 
 Note:
  1. labels are very importent for build.
