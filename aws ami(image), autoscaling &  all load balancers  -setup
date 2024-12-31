@@ -2,8 +2,9 @@
    create instance(with source) --> actions --> image and templetes --> create image --> Image name(masthan-image) --> create image.
    create new instance with masthan-image ami.
                                ---------------------------------------------------------------------------------------------
-                                          [Do what you need at particular time]
-2. ALB(Application Load Balancer): [Do both servers same]
+                                                       [Application load balancer]
+
+2. ALB(Application Load Balancer): [Do both servers same] [Do what you need at particular time]
    1. server creation:
       create 2-servers --> yum install httpd -y --> service httpd start --> service httpd status --> vim index.html(<h1> welcome to webserver one <h1>) --> service httpd restart
    
@@ -25,15 +26,29 @@
         security group --> Allow 8080 port --> save changes.
         copy loadbalancing DNS/8080 in broswer.
 
-   3. load balancer:
+    3. load balancer:
        create load balancer --> Application Load Balancer(create) --> Load balancer name(load-1) --> VPC --> Availability Zones
        --> Security groups(allow "inbound" http 80 port) --> Default action(select group) --> create load balancer.
-                                 ----------------------------------------------------------------------------------------------------
-
+                          ----------------------------------------------------------------------------------------------------
+                                                           [Network load balancer]
  3. NLB(network load balancer):   
     create target group with protocol:port(tcp:80).
-    
-    
+    comparing to ALB only differnce is "elastic ips" option.
+    Note:
+     DO as same as ALB.
+                          -----------------------------------------------------------------------------------
+                                                                [Auto scaling]
+ 4. Launch templates:
+    1.Launch templates --> Launch template name(masthan-tl) --> Template version description(version-1) --> amazon-linux --> instance type(t2.micro)
+       --> key pair --> subnet --> security group --> create launch template.
+ 
+    2.autoscaling group creation:
+      Auto Scaling group name --> Launch template(select created templet) --> next.
+      VPC --> Availability Zones and subnets --> Attach to an existing load balancer(tick) --> Existing load balancer target groups(select) 
+      --> Health check grace period(40) --> next.
+      Desired capacity(3) --> Min desired capacity(3) --> next --> next --> next.
+      
+
 
     
       
