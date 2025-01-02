@@ -1,3 +1,22 @@
-1.Elastic Block Store:
-  * create 2-servers normal way.
-  volumes --> create volume --> 
+1.Elastic Block Store:        [Change-what you need at particular time]
+  * server creation:
+    create 2-servers(ap-south-1a) normal way, 2-volumes created automatically after server creation.
+
+  * volume creation:
+    volumes --> create volume --> volume type(General purpose SSD(gp2) --> size(1) --> avilability zone(ap-south-1a) --> snapshort id(Dont create volume from snapshot)
+    --> create volume.
+    Actions --> attach volume --> instance(attch server-1) --> device name(xvde) --> attach volume.
+
+  * connect mstsc:  [Do both servers]
+    Administrator & password 
+    server-1 --> click on windows symbol(server manager) --> disk management --> file storage and services --> volumes --> new volumes(mouse right click)
+    --> next --> dick --> 2-next --> drive letter(D) --> next --> create. [check loacl once]
+
+2.EFS:
+  * setup:
+    create file system --> custom --> name(efs-1) --> life cycle management --> enhanced --> elastic --> next
+    --> mount target(select-all) --> next --> 2-next --> create.
+
+  * server creation:
+    create 2-severs normal way.
+     
