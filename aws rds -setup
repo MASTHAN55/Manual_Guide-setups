@@ -1,0 +1,6 @@
+                                                                        [Multi-AZ]
+1. create DBsubnet group.
+   Create DB subnet group --> Name(masth-db) --> Description(for db) --> VPC(default) --> Availability Zones(all) --> Subnets(all) --> create.
+
+2. create data base:
+   create DB --> mysql(tick) --> Templates(dev/test) --> Multi-AZ DB instance((tick) --> set user and password --> Burstable classes(tick) --> Storage --> 
