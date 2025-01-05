@@ -17,4 +17,4 @@
  3. Note:
     * sts policy attach to group:
      1. click usergroup --> testing-group --> Permissions --> add permissions(attach-policy) --> Customer managed[click] --> dev-policy[tick]--> attach polocies.
-     2. login with dev-user --> switch role --> account id(copy) --> iam role name(dev-role) --> display name(dev-role) --> display color(any-color) --> switch role.
+     2. login with dev-user --> switch role --> account id(copy) --> iam role name(dev-role) --> display name(dev-role) --> display color(any-color) --> switch role. 
