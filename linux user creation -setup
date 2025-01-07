@@ -1,3 +1,11 @@
-useradd masthan
-passwd masthan
- ** ** ** [give password]
+                                                 [sudo-user creation]
+1. useradd masthan    [whenever we create user "group & folder" automatically created]
+2. passwd masthan
+   ** ** ** [give password]
+3. visudo (or) vim /etc/sudoers (line-100)
+   masthan    ALL=(ALL)       ALL
+4. su - masthan 
+   sudo useradd baji
+   
+
+
