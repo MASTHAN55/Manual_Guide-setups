@@ -1,4 +1,4 @@
-                                                 [sudo-user creation]
+                                                 [sudoers-user creation]
 1. useradd masthan    [whenever we create user "group & folder" automatically created]
 2. passwd masthan
    ** ** ** [give password]
