@@ -21,7 +21,7 @@
 5. create branch:
    git checkout -b paytm
    
-5. token creation:
+5. token creation: [Do github]
    Settings --> Developer Settings --> persional access tokens(tokens clasic) --> Generate new token (classic).
 
 6. create repo in github:
