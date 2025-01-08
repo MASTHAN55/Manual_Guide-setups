@@ -5,8 +5,7 @@
    mkdir masthan
    cd masthan
 
-3. ceate branch & file:
-   git checkout -b paytm
+3. ceate file:
    touch file1 (create data)
 
 4. user info:
@@ -19,6 +18,9 @@
    git commit -m "msg" file1
    git status
 
+5. create branch:
+   git checkout -b paytm
+   
 5. token creation:
    Settings --> Developer Settings --> persional access tokens(tokens clasic) --> Generate new token (classic).
 
