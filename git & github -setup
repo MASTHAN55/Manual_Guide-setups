@@ -1,1 +1,34 @@
+1. install git:
+   yum install git -y
+
+2. create directory:
+   mkdir masthan
+   cd masthan
+
+3. ceate branch & file:
+   git checkout -b paytm
+   touch file1 (create data)
+
+4. user info:
+   git config user.name "masthan"       : 
+   git config user.email "masthan@vali" :
+
+4. 
+   git init
+   git add file1
+   git commit -m "msg" file1
+   git status
+
+5. token creation:
+   Settings --> Developer Settings --> persional access tokens(tokens clasic) --> Generate new token (classic).
+
+6. create repo in github:
+   git remote add origin https://github.com/MASTHAN55/demo.git (copy local)
+   give user name and token
+   git push origin master
+           (or)
+   git push origin master --force
+   
+   
+
 
