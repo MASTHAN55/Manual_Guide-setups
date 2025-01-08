@@ -25,7 +25,8 @@
    Settings --> Developer Settings --> persional access tokens(tokens clasic) --> Generate new token (classic).
 
 6. create repo in github:
-   git remote add origin https://github.com/MASTHAN55/demo.git (copy local)
+   git remote add origin https://github.com/MASTHAN55/demo.git
+   git push origin master
    give user name and token
    git push origin master
            (or)
