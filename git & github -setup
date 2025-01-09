@@ -31,6 +31,12 @@
    git push origin master
            (or)
    git push origin master --force
+             ----------------------------------------------------------------------------------------------------------------
+
+1. restrick branch deletion:
+   settings --> reules(rulesets) --> new ruleset --> New branch ruleset --> Ruleset Name(masthan) --> Enforcement status(active)
+   --> Targets(all branches) --> Restrict deletions --> create.
+
    
    
 
