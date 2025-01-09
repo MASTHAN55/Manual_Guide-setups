@@ -37,6 +37,8 @@
    settings --> reules(rulesets) --> new ruleset --> New branch ruleset --> Ruleset Name(masthan) --> Enforcement status(active)
    --> Targets(all branches) --> Restrict deletions --> create.
 
+2. Collaborators(team work):
+   settings --> Collaborators --> add people --> set a Collaborator above.
    
    
 
