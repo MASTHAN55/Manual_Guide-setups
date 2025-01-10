@@ -34,6 +34,7 @@
              ----------------------------------------------------------------------------------------------------------------
 
 1. restrick branch deletion:
+   projects --> link a projects(new projects) --> select templete --> create project --> create services. Ex:(train,paytm,recharge).
    settings --> reules(rulesets) --> new ruleset --> New branch ruleset --> Ruleset Name(masthan) --> Enforcement status(active)
    --> Targets(all branches) --> Restrict deletions --> create.
 
