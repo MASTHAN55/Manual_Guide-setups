@@ -14,8 +14,8 @@
           (or)
 4.1 Do all at a time (for compile,test,package at a time):
     * cd jenkins-java-project 
+    * mvn clean package
     * cd target
-    * mvn clean package 
   
 5. backup to maven homepath (.m2). 
    * mvn install
