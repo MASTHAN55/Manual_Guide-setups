@@ -2,8 +2,8 @@
 
 2. install maeven git & tree.
    * yum install git java-1.8.0-openjdk maven tree -y
-   * mkdir jenkins-java-project
-   * cd jenkins-java-project
+   * mkdir project1
+   * cd project1
 
 3. git clone (copy repo link) [pom.xml,src]
 
@@ -11,8 +11,17 @@
    * mvn compile
    * mvn test
    * mvn package
-
+          (or)
+4.1 Do all at a time (for compile,test,package at a time):
+    * mvn clean package 
+    * cd target
+    * cd jenkins-java-project
+  
 5. backup to maven homepath (.m2). 
    * mvn install
+   * ll /root/.m2/repository/in/RAHAM/NETFLIX/1.2.2/
+
+6. delete target folder:
+   * mvn clean 
 
    
