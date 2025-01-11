@@ -1,4 +1,4 @@
-1. job creation:
+1. pipeline creation:
     new iteam --> name(job1) --> pipeline(click) --> ok --> build --> executeshell. 
 
 1. local variables:
