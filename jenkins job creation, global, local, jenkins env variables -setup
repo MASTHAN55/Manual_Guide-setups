@@ -1,0 +1,22 @@
+1. job creation:
+    new iteam --> name(job1) --> pipeline(click) --> ok --> build --> executeshell. 
+
+1. local variables:
+   name=masthan
+    echo "hii all my name is $name, $name from chennai, $name is teaching devops"
+
+   Note: 
+    1.local variable will work inside of job only.
+
+2. global variables:
+    manage jenkins --> system --> global properties --> environment variables(tick) --> add(name=name, value=masthan) --> save.
+    echo "hii all my name is $name, $name is from chennai, $name is teaching devops".
+ 
+   Note:
+    1. global variables will work out side of the job.
+    2. don't give extra spaces while defining variables(name,value).
+    3. local variables are high priority then global. 
+
+3. jenkins env variables:
+   
+   
