@@ -1,1 +1,18 @@
+1. create server.
 
+2. install maeven git & tree.
+   * yum install git java-1.8.0-openjdk maven tree -y
+   * mkdir jenkins java project
+   * cd jenkins java project
+
+3. git clone (copy repo link) [pom.xml,src]
+
+4. commands:
+   * mvn compile
+   * mvn test
+   * mvn package
+
+5. backup to maven homepath (.m2). 
+   * mvn install
+
+   
