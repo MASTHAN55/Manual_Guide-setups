@@ -17,7 +17,7 @@
     2. don't give extra spaces while defining variables(name,value).
     3. local variables are high priority then global. 
 
-3. jenkins env variables: [remove global variable]
+3. jenkins env variables: [remove local, global variable]
     echo "hii all my name is $BUILD_NAME, $JOB_NAME is from chennai"
 
     Note: 
