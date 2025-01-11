@@ -23,5 +23,7 @@
     Note: 
       1. these are defined by jenkins it's self.
       2. these variables can be change form build to build automatically.
+
+4. printenv : give all env vars of jenkins (info).
    
    
