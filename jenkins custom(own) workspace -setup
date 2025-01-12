@@ -1,2 +1,2 @@
-sudo -i ---> mkdir masthan ---> cd / ---> chown jenkins:jenkins/root ---> chown jenkins:jenkins/root/masthan.
+sudo -i ---> mkdir masthan ---> cd / ---> chown jenkins:jenkins/root/ ---> chown jenkins:jenkins/root/masthan.
 job ---> configur ---> advanced ---> USE CUSTOM WORKSPACE ---> /root/masthan ---> save & build.
