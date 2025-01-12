@@ -21,7 +21,7 @@
   [Do jenkins]
    create ci job --> build triggers --> GitHub hook trigger for GITScm polling(click) --> save & exit.
 
-5. 
+5. script build:
    configur --> trigger builds remotely(eg.,from scripts) --> authentication token(masthan) --> copy url(JENKINS_URL/job/masthan/build?token=TOKEN_NAME)
    --> paste on broswer --> give token name(JENKINS_URL/job/masthan/build?token=masthan)
    --> copy jenkins public ip --> remove JENKINS_URL --> paste jenkins public ip --> click enter.
@@ -29,5 +29,4 @@
    Ex: http://3.109.55.52:8080//job/masthan/build?token=masthan
 
  Note:
-  1. All jobs will be work after closed tab.
-  
+  1. above all jobs can be work, incase if you are close the tab.
