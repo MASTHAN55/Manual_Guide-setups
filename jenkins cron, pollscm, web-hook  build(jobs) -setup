@@ -1,3 +1,6 @@
+* CODE:
+   configuration --> git(copy repo link) --> save.
+
 * CRON JOB:
   configur --> Build Triggers --> Build periodically (45 07 01 12 0) --> save & exit.
 
@@ -18,3 +21,7 @@
   [Do jenkins]
    create ci job --> build triggers --> GitHub hook trigger for GITScm polling(click) --> save & exit.
   
+
+Note:
+  1. All jobs will be work after closed tab.
+  2. 
