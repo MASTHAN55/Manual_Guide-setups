@@ -21,12 +21,16 @@
   [Do jenkins]
    create ci job --> build triggers --> GitHub hook trigger for GITScm polling(click) --> save & exit.
 
-5. script build:
-   configur --> trigger builds remotely(eg.,from scripts) --> authentication token(masthan) --> copy url(JENKINS_URL/job/masthan/build?token=TOKEN_NAME)
-   --> paste on broswer --> give token name(JENKINS_URL/job/masthan/build?token=masthan)
-   --> copy jenkins public ip --> remove JENKINS_URL --> paste jenkins public ip --> click enter.
+5. script build: 
+   1. configur --> trigger builds remotely(eg.,from scripts) --> authentication token(masthan) --> copy url(JENKINS_URL/job/masthan/build?token=TOKEN_NAME)
+      --> paste on broswer --> give token name(JENKINS_URL/job/masthan/build?token=masthan)
+      --> copy jenkins public ip --> remove JENKINS_URL --> paste jenkins public ip --> click enter it will work.
 
-   Ex: http://3.109.55.52:8080//job/masthan/build?token=masthan
+      Ex-link: http://3.109.55.52:8080//job/masthan/build?token=masthan (practical working link)
+
+   2. install plugin: [if you don't install this plugin, link will not work on another broswers]
+      manage jenkins --> Available plugins --> search & download(Build Authorization Toke Root).
+      copy link on new broswer --> login jenkins --> paste the link it will work.
 
  Note:
   1. above all jobs can be work, incase if you are close the tab.
