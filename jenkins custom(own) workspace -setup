@@ -1,7 +1,7 @@
 sudo -i ---> mkdir masthan 
 cd / ---> chown jenkins:jenkins /root/ (Do ec2-user)
 chown jenkins:jenkins /root/masthan (Do root-user)
-job ---> configur ---> advanced ---> USE CUSTOM WORKSPACE ---> /root/masthan ---> save & build.
+job ---> configur ---> general(advanced) ---> USE CUSTOM WORKSPACE ---> /root/masthan ---> save & build.
 
 Note:
  1. give jenkins permissions for root user & group. (Do ec2-user)
