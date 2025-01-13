@@ -19,7 +19,7 @@
 
 Note:
  1. labels are very importent for build. Ex:slave1
- 2. slave setup label and build restrict labels will be same for build.
+ 2. slave setup label and build restrict label will be same for build.
 
                                  [Build with pipeline]
 * Pipeline code: (it will not show this option "restrict where this job run" in pipeline).  
