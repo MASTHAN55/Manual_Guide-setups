@@ -4,7 +4,6 @@
      2-servers (install git & java 11 (or) 17) [amazon-linux-extras install java-openjdk11 -y (or) sudo yum install -y java-17-amazon-corretto, 
      yum install git java-1.8.0-openjdk maven -y] (install both servers).
      
-       
  2. Slave Setup:
     1. manage jenkins --> nodes --> new node --> node name(masthan) --> parmenent agent --> create --> number of executors(3) 
        --> remote root directory: /tmp --> labels(slave-1) --> usage: lost-option --> launch method: last-option --> host(copy private-ip of slave)
