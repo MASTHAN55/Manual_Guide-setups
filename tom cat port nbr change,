@@ -1,0 +1,13 @@
+                                                           [port nbr change]
+1. vim apache-tomcat-9.0.89/conf/server.xml
+    line:70 (port="8080" protocol="HTTP/1.1")
+    Ex: change port = 5050
+
+2. sh apache-tomcat-9.0.89/bin/shutdown.sh
+3. sh apache-tomcat-9.0.89/bin/startup.sh
+
+                                                           [user name change]
+1. vim apache-tomcat-9.0.89/conf/tomcat-users.xml
+   line:40 (<user username="tomcat" password="masthan123" roles="manager-gui", manager-script"/>)
+2. sh apache-tomcat-9.0.89/bin/shutdown.sh
+3. sh apache-tomcat-9.0.89/bin/startup.sh
