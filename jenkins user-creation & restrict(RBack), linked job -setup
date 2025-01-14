@@ -16,7 +16,7 @@ Note:
 4. role based policy:
    Dashbord --> manage jenkins --> Manage and assign roles(click)
    * global permissions:
-      manage roles --> role to add(fresher) --> save.                   //Overall: read(tick), Job: read(tick) [importent ticks].
+      manage roles --> role to add(fresher) --> save.        //Overall: read(tick), Job: read(tick) [importent ticks].
       assign roles --> add user(masthan) --> freasher(tick) --> save.
 
 5. job based policy: [Ex: only developer can see "one-job" out of all].
@@ -26,7 +26,7 @@ Note:
    * user permissions:
       go what you restrict pipeline(click) --> configuration --> Enable project-based security(tick) --> add user(masthan) --> give permissions --> save.
 
-                                                 post-build actions]
+                                                 [linked-jobs]
 1. Do job one: 
   click on job --> configur --> build environment(build other projects) --> project to build(job-2) --> save
    
