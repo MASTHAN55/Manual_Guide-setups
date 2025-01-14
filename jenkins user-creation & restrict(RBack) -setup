@@ -1,19 +1,30 @@
-1. User Creation:
-   manage jenkins --> users --> create users --> masthan:fresher.
+Note:
+  1. role based policys and job based policys both are different.
+  2. job based policy can show that job only for user, con't show all jobs.
+  3. role based policy can show all jobs for user.
 
+1. User Creation:
+    manage jenkins --> users --> create users --> username(masthan), password(masthan123) --> create user.
+    login user another broswer other wise current session will be logout --> (optional)
+    
 2. Plugin Download:
-   Dashbord --> manage jenkins --> plugins --> available plugins --> Download: Role-based Authorization Strategy.
+    Dashbord --> manage jenkins --> plugins --> available plugins --> Download(Role-based Authorization Strategy).
 
 3. Configur plugin:
-   Dashbord --> manage jenkins --> security --> authorization --> role-based statagy --> save.
+    Dashbord --> manage jenkins --> security --> authorization(role-based statagy) --> save.
 
-4. Manage and assign users: [role based permmisions]
-   manage roles --> role to add --> fresher             //Overall: read tick,  Job: read tick [importent ticks].
-   assign roles --> add user --> masthan:fresher --> save.
+4. role based policy:
+   Dashbord --> manage jenkins --> Manage and assign roles(click)
+   * global permissions:
+      manage roles --> role to add(fresher) --> save.                   //Overall: read(tick), Job: read(tick) [importent ticks].
+      assign roles --> add user(masthan) --> freasher(tick) --> save.
 
-5. job based permission: [only developer can see "one-job" out of all].
-   manage jenkins --> security --> authorization --> project-based Matrix authorization stategy --> add user(kirn) --> Overall(read tick) [Do only read tick].
-   go need-job(pipeline) --> Enable project-based security(tick) --> add user(kirn) --> give permissions --> save.
+5. job based policy: [Ex: only developer can see "one-job" out of all].
+   * global permissions:
+      manage jenkins --> security --> authorization --> project-based Matrix authorization stategy --> add user(masthan) --> Overall(read tick) [Do only read tick].
+
+   * user permissions:
+      go what you restrict pipeline(click) --> configuration --> Enable project-based security(tick) --> add user(masthan) --> give permissions --> save.
    
 
    
