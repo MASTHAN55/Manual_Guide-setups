@@ -4,19 +4,18 @@
   t2.medium, java-1.8.0, port:8081
 
 * Setup:
-  signin --> username: admin & password:/app/sonatype-work/nexus3/admin.password --> next --> set own-password --> disable ananamous acces --> save.
+  signin(click) --> username(admin & password:/app/sonatype-work/nexus3/admin.password) --> sign in --> set own-password --> disable ananamous acces --> next --> finish.
 
-* Creating repo:
-  settings symbol --> repositories --> new --> maven2(hosted) --> name(masthan) --> save.
+* Creating a repo:
+  settings symbol(click) --> repositories --> new --> maven2(hosted) --> name(masthan) --> save.
 
 * install plugins:
   manage jenkins --> Plugins --> avilable Plugins --> download plugin(Nexus Artifact uploder).
 
 * Pipeline Syntex:
-  Click pipeline syntax --> Simple step(Nexus Artifact uploder) --> Nexus Version(NEXUS3) --> Protocol(HTTP) --> nexus URL(35.248.12.150:8080) --> Credentials --> add
-  --> username(admin) --> password(masthan123) --> Description(nexus) --> add --> 
-  Go pom.xml file in git-Hub --> Group id(in raham) --> Version(1.2.2) ---> Repository(masthan) --> Artifacts --> Artifactid (masthan) --> type(war) --> 
-  file(target/Netflix-1.2.2 war) --> Generate pipeline script.
+  Click pipeline syntax --> Simple step(Nexus Artifact uploder) --> Nexus Version(NEXUS3) --> Protocol(HTTP) --> nexus URL & port(35.248.12.150:8080) --> Credentials --> add
+  --> username(admin) --> password(masthan123) --> Description(nexus) --> add --> Go pom.xml file in git-Hub --> Group id(in.raham)
+  --> Version(1.2.2) --> Repository(masthan) --> Artifacts --> Artifactid(masthan) --> type(war) --> file(target/Netflix-1.2.2 war) --> Generate pipeline script.
 
 pipeline {
     agent any
@@ -50,7 +49,7 @@ pipeline {
     }
 }
 
-URL(copy & paste) --> broswe --> click on netflix.war --> path click --> keep --> download to local.
+nexus URL(copy & paste) --> broswe --> click on netflix.war --> path click --> keep --> download to local.
                                              -------------------------------------------------------------------------------------------
 
                                                                   [Tomcat -Setup]
