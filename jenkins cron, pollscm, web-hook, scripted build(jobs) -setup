@@ -24,7 +24,7 @@
 5. script build: 
    1. configur --> trigger builds remotely(eg.,from scripts) --> authentication token(masthan) --> copy url(JENKINS_URL/job/masthan/build?token=TOKEN_NAME)
       --> paste on broswer --> give token name(JENKINS_URL/job/masthan/build?token=masthan)
-      --> copy jenkins public ip --> remove JENKINS_URL --> paste jenkins public ip --> click enter it will work.
+      --> copy jenkins public-ip & port --> remove JENKINS_URL --> paste jenkins public-ip & port --> click enter it will work.
 
       Ex-link: http://3.109.55.52:8080//job/masthan/build?token=masthan (practical working link)
 
