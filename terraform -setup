@@ -1,3 +1,3 @@
 Create server.
 create IAM user(Adminaccess) and attach to server. 
-install terraform using script.
+install terraform using "script".
