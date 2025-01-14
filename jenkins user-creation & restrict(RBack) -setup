@@ -5,7 +5,7 @@ Note:
 
 1. User Creation:
     manage jenkins --> users --> create users --> username(masthan), password(masthan123) --> create user.
-    login user another broswer other wise current session will be logout --> (optional)
+    login user another broswer other wise current session will be logout.
     
 2. Plugin Download:
     Dashbord --> manage jenkins --> plugins --> available plugins --> Download(Role-based Authorization Strategy).
