@@ -1,5 +1,11 @@
 1. locals:
- 
+provider "aws" {
+region = "us-east-1"
+}
+locals  {
+env = "${terraform.workspace}"
+}
+                         ---------------------------------------------------------------------------------- 
 1. DEPENDS_ON: One resource creation depends on another resource.
 provider "aws" {
 }
