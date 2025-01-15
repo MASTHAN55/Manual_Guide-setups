@@ -6,7 +6,7 @@ locals  {
 env = "${terraform.workspace}"
 }
                          ---------------------------------------------------------------------------------- 
-1. DEPENDS_ON: One resource creation depends on another resource.
+2. DEPENDS_ON (One resource creation depends on another resource):
 provider "aws" {
 }
 
@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "three" {
 }
 
                               -------------------------------------------------------------------------------------------------------------
-2. COUNT:
+3. COUNT:
 provider "aws" {
 }
 
@@ -49,8 +49,8 @@ variable "instance_name" {
 }
 
                               ------------------------------------------------------------------------------------------
-FOR_EACH: used to create unidentical objects.
-it will eliminates the duplicate values.
+4. FOR_EACH: used to create unidentical objects(multiple servers at a time).
+   it will eliminates the duplicate values.
 
 resource "aws_instance" "two" {
   for_each      = toset(["dev-server", "test-server", "prod-server"])
@@ -61,8 +61,8 @@ resource "aws_instance" "two" {
   }
 }
 
-                          ---------------------------------------------------------------------------------------------
-3. provent destroy: 
+                           ---------------------------[lifecycles]------------------------------------------------------------------
+5. provent destroy(it will stop destroying server): 
 provider "aws" {
 }
 
@@ -78,7 +78,7 @@ resource "aws_instance" "two" {
 }
                        -------------------------------------------------------------------------------------------------
 
-4. CREATE BEFORE DESTROY:  
+6. CREATE BEFORE DESTROY():  
 provider "aws" {
 }
 
@@ -92,9 +92,12 @@ resource "aws_instance" "two" {
     create_before_destroy = true
   }
 }
+
+Note:
+  1. reduse server down time, in reail time.
                       -----------------------------------------------------------------------------------------------
 
-5. ignore_changes:
+7. ignore_changes:
 provider "aws" {
 }
 
@@ -110,7 +113,7 @@ resource "aws_instance" "two" {
 }
 
                                            --------------------------------------------------------------------------------------
-6. 
+8. 
 provider "aws" {
   region = "ap-south-1"
 }
