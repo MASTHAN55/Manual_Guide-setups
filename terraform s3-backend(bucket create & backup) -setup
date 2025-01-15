@@ -1,4 +1,4 @@
-terraform {                    // first create bucket by own, enable bucket versining.
+terraform {                    // first create bucket by manual, enable bucket versining.
 backend "s3" {
 bucket = "terraformbucket007"
 key = "terraform.tfstate"             //backup statefile
