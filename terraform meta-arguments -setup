@@ -1,3 +1,5 @@
+1. locals:
+ 
 1. DEPENDS_ON: One resource creation depends on another resource.
 provider "aws" {
 }
