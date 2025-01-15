@@ -62,7 +62,7 @@ variable "instance_name" {
 }
 
 Commands:
- 1. tarraform fmt
+ 1. terraform fmt
  1.1 terraform init
 
  2. terraform plan -var-file="test.tfvars" -auto-approve
