@@ -2,11 +2,11 @@ provider "aws" {
   region = "ap-south-1"
 }
 import {
-  to = aws_instance.one (manual name)
+  to = aws_instance.one (user defind)
   id = "copy server id"
 }
 
-commands:                              ec2.tf(manual name)
+commands:                              ec2.tf(user defind)
 1. terraform plan -generate-config-out=ec2.tf
 2. terraform apply -auto-approve
 3. terraform state list
