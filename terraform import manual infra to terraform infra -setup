@@ -10,6 +10,7 @@ commands:                              ec2.tf(user defind)
 1. terraform plan -generate-config-out=ec2.tf
 2. terraform apply -auto-approve
 3. terraform state list
+4. ignore some errors
 
                      -------------------------------------------------------------------------
 provider "aws" {
