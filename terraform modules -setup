@@ -37,6 +37,7 @@ terraform apply -var-file="dev.tfvars" -auto-approve      : creating resources f
     git add *
     git remote add origin (copy repolink)
 
+2. Developer (or) user:
 provider "aws" {
 region = "ap-south-1"
 }
@@ -45,4 +46,5 @@ modules "myinfra" {
 source = "copy repolink"
 }    
 
+ex: source = "git::https://github.com/your-username/terraform-webserver-module.git//main"
 
