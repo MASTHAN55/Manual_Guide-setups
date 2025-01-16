@@ -2,11 +2,25 @@ provider "aws" {
   region = "ap-south-1"
 }
 import {
-  to = aws_instance.one
+  to = aws_instance.one (manual name)
   id = "copy server id"
 }
 
 commands:
 1. terraform plan -generate-config-out=ec2.tf
+2. terraform apply -auto-approve
+3. terraform state list
+
+                     -------------------------------------------------------------------------
+provider "aws" {
+  region = "ap-south-1"
+}
+import {
+  to = aws_instance.s3
+  id = "bucket name"
+}
+
+commands:
+1. terraform plan -generate-config-out=s3.tf
 2. terraform apply -auto-approve
 3. terraform state list
