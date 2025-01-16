@@ -1,1 +1,74 @@
+                                                     [remote-exec]
+1. remote-exec:
+provider "aws" {
+}
+
+resource "aws_instance" "one" {
+  ami           = "ami-04823729c75214919"
+  instance_type = "t2.micro"
+  key_name      = "yterraform"
+  tags = {
+    Name = " rahaminstance"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install git maven tree httpd -y",
+      "touch file1"
+    ]
+
+    connection {
+      type        = "ssh"
+      user        = "ec2-user"
+      private_key = file("~/.ssh/id_rsa")
+      host        = self.public_ip
+    }
+  }
+}
+                     -----------------------------------------------------------------------------------------------
+                                                         [remote exec]
+2. remote exec:
+provider "aws" {
+}
+
+resource "aws_instance" "one" {
+  ami           = "ami-04823729c75214919"
+  instance_type = "t2.micro"
+  key_name      = "yterraform"
+  tags = {
+    Name = " rahaminstance"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install git maven tree httpd -y",
+      "touch file1"
+    ]
+
+    connection {
+      type        = "ssh"
+      user        = "ec2-user"
+      private_key = file("~/.ssh/id_rsa")
+      host        = self.public_ip
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
