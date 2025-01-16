@@ -6,7 +6,7 @@ import {
   id = "copy server id"
 }
 
-commands:
+commands:                              ec2.tf(manual name)
 1. terraform plan -generate-config-out=ec2.tf
 2. terraform apply -auto-approve
 3. terraform state list
