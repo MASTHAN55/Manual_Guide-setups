@@ -1,0 +1,27 @@
+1. yum install tree -y
+2. mkdir -p modules/ec2                     ec2 and s3 both(sub-folders)
+3. mkdir -p modules/s3
+
+4. vim modules/ec2/main.tf      (copy ec2-code)
+resource "aws_instance" "three" {
+  ami           = "ami-04629cfb3bd2d73f3"
+  instance_type = "t2.micro"
+}  
+
+5. vim modules/s3/main.tf       (copy s3-code)
+resource "aws_s3_bucket" "three" {
+  bucket = "rahamshaik00998877abchsg"
+}
+
+6. vim main.tf
+provider "aws" {
+region = "ap-south-1"
+}
+
+module "ec2" {
+source = "./modules/ec2"
+}
+
+module "s3" {
+source = "./modules/s3"
+}
