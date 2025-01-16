@@ -27,7 +27,22 @@ source = "./modules/s3"
 }
 
 commands:
-1. 
+terraform init                                            : install plugins.
+terraform plan -var-file="dev.tfvars"                     : plan selected.
+terraform apply -var-file="dev.tfvars" -auto-approve      : creating resources for dev-server.
 
+1. push to github:
+    yum install git -y
+    git init
+    git add *
+    git remote add origin (copy repolink)
+
+provider "aws" {
+region = "ap-south-1"
+}
+
+modules "myinfra" {
+source = "copy repolink"
+}    
 
 
