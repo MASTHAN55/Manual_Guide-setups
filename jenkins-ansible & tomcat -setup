@@ -57,22 +57,24 @@ vim deploy.yml
 
 * ansible-playbook deploy.yml
 
-Do slave servers:
-  * copy public ip of slave-1 & slave-2 and paste on broswer
-  * if we can see netflix it's done.
+2. Do slave servers:
+    * copy public ip of slave-1 & slave-2 and paste on broswer
+    * if we can see netflix it's done.
 
-========================================================= [FRENT & BACKEND-CODE DEPLOYMENT] =====================================================================
-1. Setup tomcat [Do ansible server]. 
-  * vim tomcat.yml         [create]
-  * vim tomcat-users.xml   [create] 
-  * vim context.xml        [create]
-  * ansible-playbook tomcat.yml 
+=============================================== [FRENT & BACKEND-CODE SEMI AUTOMATED DEPLOYMENT] =====================================================================
+1. Setup tomcat [Do ansible server]. but it will work on slave servers.
+    * vim tomcat.yml         [create]
+    * vim tomcat-users.xml   [create] 
+    * vim context.xml        [create]
+    * ansible-playbook tomcat.yml 
+    * login tomcat using both slave servers.
   
 2. jenkins inastallation. [Do ansible-server]
-  * install jenkins [jenkins.sh]
-2.1.[Do-configuration...]
-  * install "ansible and stage view" pluggens.
-      ---> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
+    * install jenkins [vim jenkins.sh]
+    * install "ansible and stage view" pluggens.
+
+2.1 configur ansible tool
+      --> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
 
 3. create pipeline
 
@@ -101,7 +103,9 @@ Do slave servers:
         }
     }
 }
-    
+
+1. if we can see artifacts in local ansible server it's good.
+
 vim deploy.yml
 - hosts: all
   tasks:
@@ -110,12 +114,12 @@ vim deploy.yml
         src: /var/lib/jenkins/workspace/pipeline/target/netflix-1.2.0.war
         dest: /root/tomcat/webapps
 
-==================================================================== [FULLY-AUTOMATED PIPELINE] =============================================================================
+=========================================== [FRENT & BACKEND-CODEFULLY-AUTOMATED DEPLOYMENT ] =============================================================================
 mv deploy.yml /etc/ansible/deploy.yml         
 
----> configuration ---> pipeline syntax ---> sample step(ansible) ---> ansible tool(ansible) ---> playbook file path in workspace(/etc/ansible/deploy.yml)
-inventory file path on workspace(/etc/ansible/hosts) ---> ssh connection credentials ---> username with passwd(user name=root, password=masthan123)
-host subset($server) ---> disable the host ssh key check(click) ---> Generate pypeline script.
+--> configuration --> pipeline syntax --> sample step(ansible) --> ansible tool(ansible) --> playbook file path in workspace(/etc/ansible/deploy.yml)
+inventory file path on workspace(/etc/ansible/hosts) --> ssh connection credentials --> username with passwd(user name=root, password=masthan123)
+host subset($server) --> disable the host ssh key check(click) --> Generate pypeline script.
 
 [HOSTS]
 ---> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> save.
