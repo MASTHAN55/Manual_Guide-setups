@@ -1,8 +1,60 @@
 yum install tree -y
 mkdir roles
 cd roles
-mkdir -p pkgs/tasks
-mkdir -p users/tasks
-mkdir -p webserver/tasks
+mkdir -p pkgs/tasks/main.yml
+mkdir -p users/tasks/main.yml
+mkdir -p webserver/tasks/main.yml
+
+Ex: ROLE:
+
+└── roles
+    ├── pkgs
+    │   └── tasks
+    │       └── main.yml
+    ├── users
+    │   └── tasks
+    │       └── main.yml
+    └── webserver
+        └── tasks
+            └── main.yml
+
+
+vim pkgs/tasks/main.yml
+
+    - name: installing packages
+      yum: name={{item}} state=present
+      with_items:
+        - git
+        - maven
+        - docker
+        - tree
+
+vim users/tasks/main.yml
+- name: create users
+  user: name={{item}} state=present
+  with_items:
+      - masthan
+      - srinu
+      - baji
+      - vali
+
+vim webserver/tasks/main.yml
+- name: installing webserver
+  yum: name=httpd state=present
+
+- name: start  httpd
+  service: name=httpd state=started
+
+vim masthan.yml
+- hosts: all
+  roles:
+    - pkgs
+    - webserver
+    - users
+
+commands:
+1. ansible-playbook masthan.yml
+
+
 
 
