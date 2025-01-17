@@ -133,15 +133,15 @@ vim deploy.yml
 
 3. mv deploy.yml /etc/ansible/deploy.yml         
 
---> configuration --> pipeline syntax --> sample step(ansibleplaybook:invoke an ansible playbook) --> ansible tool(ansible) --> playbook file path in workspace(/etc/ansible/deploy.yml)
+configuration --> pipeline syntax --> sample step(ansibleplaybook:invoke an ansible playbook) --> ansible tool(ansible) --> playbook file path in workspace(/etc/ansible/deploy.yml)
 inventory file path on workspace(/etc/ansible/hosts) --> ssh connection credentials --> username with passwd(user name=root, password=masthan123)
 host subset($server) --> disable the host ssh key check(click) --> Generate pypeline script.
 
 [HOSTS]
---> general --> this project is parameterised --> choice parameter(name=server, choice=dev,test) --> save.
+ general --> this project is parameterised --> choice parameter(name=server, choice=dev,test) --> save.
 
 [BRANCHES]
---> configuration --> pypeline syntax --> sample step(git) --> repository url(paste jenkins-java-project URL) --> branch($branch) --> copy-link and paste on git.
+ configuration --> pypeline syntax --> sample step(git) --> repository url(paste jenkins-java-project URL) --> branch($branch) --> copy-link and paste on git.
 --> general --> this project is parameterised(name=branch,choices=master,main,relese) --> save.
 
     pipeline {
