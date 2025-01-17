@@ -1,0 +1,25 @@
+- hosts: all
+ignore_errors: yes
+vars:
+a: git
+b: httpd
+  tasks:
+    - name: installing git
+      yum: name={{a}} state=present
+      tags: a
+
+    - name: installing httpd
+      service: name={{b}} state=present
+      tags: b
+
+    - name: copying a file
+      copy: src=index.html dest=/root
+      tags: c
+
+    - name: create user
+      user: name=shaik state=present
+      tags: d
+
+    - name: installing mamven
+      yum: name=maven state=present
+      tags: e
