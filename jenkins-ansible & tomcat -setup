@@ -115,18 +115,34 @@ vim deploy.yml
         dest: /root/tomcat/webapps
 
 =========================================== [FRENT & BACKEND-CODEFULLY-AUTOMATED DEPLOYMENT ] =============================================================================
-mv deploy.yml /etc/ansible/deploy.yml         
 
---> configuration --> pipeline syntax --> sample step(ansible) --> ansible tool(ansible) --> playbook file path in workspace(/etc/ansible/deploy.yml)
+1. Do all ansible setup.
+1.1. Setup tomcat [Do ansible server]. but it will work on slave servers.
+     * vim tomcat.yml         [create]
+     * vim tomcat-users.xml   [create] 
+     * vim context.xml        [create]
+     * ansible-playbook tomcat.yml 
+     * login tomcat using both slave servers.
+  
+2. jenkins inastallation. [Do ansible-server]
+    * install jenkins [vim jenkins.sh]
+    * install "ansible and stage view" pluggens.
+
+2.1 configur ansible tool
+      --> go to tools --> ansible (name= ansible, path to ansible executables directory= /usr/bin).
+
+3. mv deploy.yml /etc/ansible/deploy.yml         
+
+--> configuration --> pipeline syntax --> sample step(ansibleplaybook:invoke an ansible playbook) --> ansible tool(ansible) --> playbook file path in workspace(/etc/ansible/deploy.yml)
 inventory file path on workspace(/etc/ansible/hosts) --> ssh connection credentials --> username with passwd(user name=root, password=masthan123)
 host subset($server) --> disable the host ssh key check(click) --> Generate pypeline script.
 
 [HOSTS]
----> general ---> this project is parameterised ---> choice parameter(name=server, choice=dev,test) ---> save.
+--> general --> this project is parameterised --> choice parameter(name=server, choice=dev,test) --> save.
 
 [BRANCHES]
----> configuration ---> pypeline syntax ---> sample step(git) ---> repository url(paste jenkins-java-project URL) ---> branch($branch) ---> copy-link and paste on git.
----> general ---> this project is parameterised(name=branch,choices=master,main,relese) ---> save.
+--> configuration --> pypeline syntax --> sample step(git) --> repository url(paste jenkins-java-project URL) --> branch($branch) --> copy-link and paste on git.
+--> general --> this project is parameterised(name=branch,choices=master,main,relese) --> save.
 
     pipeline {
     agent any 
