@@ -1,0 +1,8 @@
+yum install tree -y
+mkdir roles
+cd roles
+mkdir -p pkgs/tasks
+mkdir -p users/tasks
+mkdir -p webserver/tasks
+
+
