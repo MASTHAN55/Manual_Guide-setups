@@ -23,3 +23,6 @@ b: httpd
     - name: installing mamven
       yum: name=maven state=present
       tags: e
+
+commands:
+1. ansible-playbook masthan.yml --tags d
