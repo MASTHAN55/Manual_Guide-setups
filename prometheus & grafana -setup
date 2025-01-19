@@ -1,16 +1,16 @@
-git-hub: https://github.com/masthan55/all-setup.git
+Note: take code from all scripts.
 
 1. Create servers.
-  * Create 3-servers. 1-main-server, 2-worker-node servers.            [Node-exporter ---> prometheus ---> graphana dash-bord].
-  * main server (Execute all-script)                                   (install "pegion.sh" script).
-  * worker-1 (install node-exporter)  from git(pegion.sh)       (if you don't install node-exporter in worker nodes it will not work).
-  * worker-2 (install node-exporter)         "
+    * Create 3-servers. 1-main-server, 2-worker-node servers.            [Node-exporter ---> prometheus ---> graphana dash-bord].
+    * main server (Execute all-script)                                   (install "pegion.sh" script).
+    * worker-1 (install node-exporter)  from git(pegion.sh)       (if you don't install node-exporter in worker nodes it will not work).
+    * worker-2 (install node-exporter)         "
 
 2. Do main-server.
-  * vim /etc/prometheus/prometheus.yml                 (if we can add another worker-node) 
-  * vim /etc/hosts
-    5.25.658.657 worker-1          (copy private-ip of worker-1)
-    3.54.548.552 worker-2          (copy private-ip of worker-2)   
+    * vim /etc/prometheus/prometheus.yml       (if we can add another worker-node) 
+    * vim /etc/hosts
+      5.25.658.657 worker-1      (copy private-ip of worker-1)
+      3.54.548.552 worker-2      (copy private-ip of worker-2)   
 
 3. Connecting ports.
     PROMETHERUS   : 9090            
@@ -18,8 +18,9 @@ git-hub: https://github.com/masthan55/all-setup.git
     GRAFANA       : 3000
 
 4. CONNECTING PROMETHEUS TO GARAFANA:
-   connect to grafana dashboard --> Add your first "Data source" --> add -- > promethus --> url of prometheus --> save & test
-  --> top of page --> explore data --> if you want run some queries --> top --> import dashboard --> 1860 --> laod ---> prometheus --> import 
+   user name(admin) and password(admin) --> create custom password.
+   click on "Data source" --> add --> click(promethus) --> connection(copy url of prometheus(ex:http://54.171.159:9090) --> save & test.
+   top of page click(plus symbol) -->select(import dashboard) --> 1860 --> laod ---> prometheus(prometheus) --> import.
 
 5. Go grafana dashbord refreash and check host(option).
    * if you can see worker-1 and worker-2 it's completed.
