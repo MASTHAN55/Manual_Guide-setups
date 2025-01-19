@@ -1,0 +1,19 @@
+
+1. ecr creating:
+    search ecr --> create --> visibility settings(public) --> Repository name(movies) --> scan on push(enabled) --> create repository.
+
+2. create server & install dcoker:
+    * create one server with(t2.medium) 
+    * attach IAM role to server.
+    * write docker file.
+    * install git and docker, clone flipcart repo from github.
+    * copy commands form ecr.
+
+3. ecs:(like docker swarm)
+    * search ecs --> cluster name(flipcart) --> create cluster.
+
+
+
+
+
+create one server(t2.medium) --> attach IAM role.
