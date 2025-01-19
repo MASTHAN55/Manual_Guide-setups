@@ -18,7 +18,7 @@
    git config user.name "masthan"       : 
    git config user.email "masthan@vali" :
 
-5. create branch:
+5. create & switch branch:
    git checkout -b paytm
    
 5. token creation: [Do github]
