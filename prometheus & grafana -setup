@@ -24,4 +24,7 @@ Note: take code from all scripts.
 
 5. Go grafana dashbord refreash and check host(option).
     * if you can see worker-1 and worker-2 it's completed.
+
+6.  Extra Dashbirds:
+    search on broswer(grafana cloud) --> dashbords(click) --> search(linux) --> 
  
