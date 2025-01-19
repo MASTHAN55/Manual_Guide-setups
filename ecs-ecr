@@ -1,2 +1,16 @@
 
-create one server(t2.medium) ---> attach IAM role ---> create ecr(name=movies, enable scan on push) ---> create ecs(name=flipcart) ---> execuite commands from ecr(view push commands).
+1. ecr creating:
+    search ecr --> create --> visibility settings(private) --> Repository name(movies) --> scan on push(enabled) --> create repository.
+
+2. create server & install dcoker
+    * create one server with(t2.medium) 
+    * attach IAM role to server.
+    * install git and clone flipcart repo from github.
+    * 
+
+
+
+
+
+
+create one server(t2.medium) --> attach IAM role.
