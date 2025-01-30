@@ -1,6 +1,6 @@
                                                                                 [Replication]
 Note: Do what you need at particular time.
-1. Bucket creation [Both enable Bucket versioning]:
+1. Bucket creation [Both buckets enable Bucket versioning]:
    1. source-bucket001
    2. dest-bucket002
   source bucket001 --> management --> Create Replication rules --> Replication rule name(rep-rule) --> Source bucket(Apply to all objects in the bucket) 
