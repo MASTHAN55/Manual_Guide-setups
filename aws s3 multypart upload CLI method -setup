@@ -22,7 +22,7 @@ Note:
      (copy & save UploadId)
 
 4. git bash: 
-    open git bash --> copy vedio file path(cd D:\Masthan\vedio) --> cd Masthan --> cd vedio/.
+    open git bash --> copy vedio file path(cd D:\Masthan\vedio) --> cd Masthan --> cd vedio/. (change to directory)
 
 5. Split the file using bash:
     split -b 50M masthan.mp4 masthan_part_      (if you can see pultiple parts of vedio it's good).
