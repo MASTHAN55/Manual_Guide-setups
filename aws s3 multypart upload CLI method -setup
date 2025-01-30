@@ -1,0 +1,83 @@
+Note:
+ 1. we need to change bucket name & multipart upload names on every command.
+
+1. bucket creation:
+    1.ccit-mp-bucket
+
+2. create one user(admin acess) & genarate access key and secret key.
+
+3. command prompt:
+    open command prompt --> copy vedio file path and paste on command prompt(enter) --> type & enter(aws configur) --> give access key
+    and secret key --> give region(ap-south-1) & (enter 2-times).
+  * aws configur  (check region onece)
+
+   command:
+    * aws s3api create-multipart-upload --bucket ccit-mp-bucket --key masthanvedio.mp4 --region ap-south-1 
+    {
+    "ServerSideEncryption": "AES256",
+    "Bucket": "ccitaugbatch1",
+    "Key": "azure.mp4",
+    "UploadId": "rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI."
+   }
+     (copy & save UploadId)
+
+4. git bash: 
+    open git bash --> copy vedio file path(cd D:\Masthan\vedio) --> cd Masthan --> cd vedio/.
+
+5. Split the file using bash:
+    split -b 50M masthan.mp4 masthan_part_      (if you can see pultiple parts of vedio it's good).
+
+6. command prompt:
+    Upload each chunk separately (use the above "UploadId")
+
+ commands:
+6.1 part1:
+   aws s3api upload-part --bucket ccit-mp-bucket --key masthan.mp4 --part-number 1 --body D:\Masthan\vedio_part_aa --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI.
+
+{
+    "ServerSideEncryption": "AES256",
+    "ETag": "\"60fda5b8adbf66d30f825966255ac9ee\""
+}
+
+   * copy and save "ETag": "\"60fda5b8adbf66d30f825966255ac9ee\""
+
+7. part2:
+aws s3api upload-part --bucket ccitaugbatch1 --key azure.mp4 --part-number 2 --body D:\Naga\Multipart\azure_part_ab --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI.
+
+{
+    "ServerSideEncryption": "AES256",
+    "ETag": "\"9ee0bea5c49a042f843a054b9e4dd422\""
+}
+
+8. part3:
+aws s3api upload-part --bucket ccitaugbatch1 --key azure.mp4 --part-number 3 --body D:\Naga\Multipart\azure_part_ac --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI.
+
+{
+    "ServerSideEncryption": "AES256",
+    "ETag": "\"8b7950476a7916db889edecda20461c7\""
+}
+
+9. part4:
+aws s3api upload-part --bucket ccitaugbatch1 --key azure.mp4 --part-number 4 --body D:\Naga\Multipart\azure_part_ad --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI.
+
+{
+    "ServerSideEncryption": "AES256",
+    "ETag": "\"d8d58d721aa1e71bd0dbb49477799122\""
+}
+
+10. part5:
+aws s3api upload-part --bucket ccitaugbatch1 --key azure.mp4 --part-number 5 --body D:\Naga\Multipart\azure_part_ae --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI.
+
+{
+    "ServerSideEncryption": "AES256",
+    "ETag": "\"99b273e0a69fb26f99e691514996cd99\""
+}
+
+
+Final step (use the above Etags and UploadId)
+---------------------------------------------
+
+aws s3api complete-multipart-upload --bucket ccitaugbatch1 --key azure.mp4 --upload-id rJb33OaQosXrfHsPGQ1l_bzDNNyDVNiYX2pt9J7L8DCcoE5F.hmwpxv0BS56.hrHgDA.UCJ1XinGzNI7YYbVz2Ml_Xp8LP5OIxUDRZL_hd5fFFpRIDxlzOHNMt.BjXI. --multipart-upload Parts=[{ETag=60fda5b8adbf66d30f825966255ac9ee,PartNumber=1},{ETag=9ee0bea5c49a042f843a054b9e4dd422,PartNumber=2},{ETag=8b7950476a7916db889edecda20461c7,PartNumber=3},{ETag=d8d58d721aa1e71bd0dbb49477799122,PartNumber=4},{ETag=99b273e0a69fb26f99e691514996cd99,PartNumber=5}]
+
+* check bucket file uploded or not. 
+    
