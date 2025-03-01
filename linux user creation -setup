@@ -5,7 +5,8 @@
 3. visudo (or) vim /etc/sudoers (line-100)
    masthan    ALL=(ALL)       ALL
 4. su - masthan 
-   sudo useradd baji (if we can create user it's working)
+
+5. sudo useradd baji (if we can create user it's working)
 
 commands:
 cat /etc/passwd  : to show list of users
